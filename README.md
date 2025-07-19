@@ -1,7 +1,7 @@
 # 💰 XfeaturesRPGMoney
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Spigot](https://img.shields.io/badge/spigot-1.16+-green.svg)
+![Spigot](https://img.shields.io/badge/spigot-1.13+-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
 
 ## 📝 Описание
