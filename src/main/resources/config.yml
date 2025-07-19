@@ -1,9 +1,10 @@
+# Коэффициент выпадения монет из мобов из спавнера
 spawner-percent: 0.6
 
 # Основные настройки плагина
-drop-chance: 0.75
-show-action-bar-messages: true
-player-death-drop-percentage: 0.07
+drop-chance: 0.75 # Вероятность выпадения монет при добыче блоков и убийстве мобов
+show-action-bar-messages: true # Показывать сообщения при подборе монет в Action Bar
+player-death-drop-percentage: 0.07 # Коэффициент выпадения монет из убитого игрока
 
 # Множители для зачарования "Удача"
 fortune-multipliers:

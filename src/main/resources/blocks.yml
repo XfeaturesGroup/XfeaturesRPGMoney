@@ -1,3 +1,4 @@
+# BLOCK: [min, max]
 CROPS: [3.5, 21]
 WHEAT: [3.5, 21]
 POTATOES: [3.5, 8.75]
