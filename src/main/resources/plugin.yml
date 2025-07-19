@@ -1,0 +1,26 @@
+name: XfeaturesRPGMoney
+version: '${project.version}'
+main: xyz.xfeatures.XfeaturesRPGMoney
+api-version: '1.13'
+prefix: XFEATURES
+load: STARTUP
+authors: [XfeaturesGroup, kingnoype]
+description: RPG Money system for Minecraft servers
+website: https://xfrpgm.dev.xfeatures.xyz/
+depend: [Vault]
+commands:
+  rpgmoney:
+    description: Main command for XfeaturesRPGMoney plugin
+    usage: /rpgmoney <reload|stats|top|info>
+    aliases: [rpgm, rmoney]
+    permission: xfeatures.rpgmoney.use
+permissions:
+  xfeatures.rpgmoney.use:
+    description: Allows using basic RPGMoney commands
+    default: true
+  xfeatures.rpgmoney.reload:
+    description: Allows to reload the plugin configuration
+    default: op
+  xfeatures.rpgmoney.top:
+    description: Allows to view top players
+    default: true

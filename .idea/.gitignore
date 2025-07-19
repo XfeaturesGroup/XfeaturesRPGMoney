@@ -1,0 +1,48 @@
+# Игнорируемые файлы по умолчанию
+/shelf/
+/workspace.xml
+# HTTP-клиент на основе редактора
+/httpRequests/
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+# Compiled class files
+*.class
+# Log files
+*.log
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+# virtual machine crash logs
+hs_err_pid*
+# Eclipse
+.classpath
+.project
+.settings/
+# Mac
+.DS_Store
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
