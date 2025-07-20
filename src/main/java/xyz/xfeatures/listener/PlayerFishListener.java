@@ -11,6 +11,7 @@ import xyz.xfeatures.util.MoneyUtil;
 import java.util.List;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
+import xyz.xfeatures.util.CurrencyFormatter;
 
 public class PlayerFishListener implements Listener {
     @EventHandler
@@ -26,9 +27,13 @@ public class PlayerFishListener implements Listener {
         Economy eco = XfeaturesRPGMoney.economy;
         if (eco != null) {
             eco.depositPlayer(player, amount);
+            XfeaturesRPGMoney.instance.playerData.addCollectedMoney(player, amount);
         }
-        String msg = XfeaturesRPGMoney.instance.messagesConfig.get("pickup")
-                .replace("%amount%", String.format("%.2f", amount));
-        player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
+        
+        if (XfeaturesRPGMoney.instance.mainConfig.isShowActionBarMessages()) {
+            String msg = XfeaturesRPGMoney.instance.messagesConfig.get("pickup");
+            msg = CurrencyFormatter.replaceAmount(msg, amount);
+            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
+        }
     }
 }

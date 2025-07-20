@@ -10,60 +10,51 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import xyz.xfeatures.XfeaturesRPGMoney;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.List;
+import java.util.Random;
 
 public final class MoneyUtil {
 
-    private static final ThreadLocalRandom RANDOM = ThreadLocalRandom.current();
+    private static final Random random = new Random();
 
     private MoneyUtil() {
         throw new UnsupportedOperationException("Utility class");
     }
 
     public static void dropMoney(Location loc, double amount) {
-        if (RANDOM.nextDouble() > XfeaturesRPGMoney.instance.mainConfig.getDropChance()) {
+        if (amount <= 0) return;
+
+        if (random.nextDouble() > XfeaturesRPGMoney.instance.mainConfig.getDropChance()) {
             return;
         }
 
         amount = Math.min(amount, XfeaturesRPGMoney.instance.mainConfig.getMaxMoneyDrop());
 
         if (XfeaturesRPGMoney.instance.mainConfig.isCombineNearbyDrops()) {
-            amount = combineWithNearbyMoney(loc, amount);
-        }
+            double radius = XfeaturesRPGMoney.instance.mainConfig.getCombineRadius();
+            List<Item> nearbyItems = new ArrayList<>(loc.getWorld().getEntitiesByClass(Item.class));
 
-        createAndDropMoneyItem(loc, amount);
-    }
+            for (Item item : nearbyItems) {
+                if (item.getLocation().distance(loc) <= radius && item.getItemStack().getType() == Material.SUNFLOWER) {
+                    ItemMeta meta = item.getItemStack().getItemMeta();
+                    if (meta != null) {
+                        Double existingAmount = meta.getPersistentDataContainer().get(
+                                XfeaturesRPGMoney.instance.getNameKey(),
+                                PersistentDataType.DOUBLE
+                        );
 
-    private static double combineWithNearbyMoney(Location loc, double amount) {
-        double radius = XfeaturesRPGMoney.instance.mainConfig.getCombineRadius();
-        Collection<Entity> nearbyEntities = loc.getWorld().getNearbyEntities(loc, radius, radius, radius);
-
-        for (Entity entity : nearbyEntities) {
-            if (!(entity instanceof Item)) continue;
-
-            Item droppedItem = (Item) entity;
-            ItemStack stack = droppedItem.getItemStack();
-
-            if (stack.getType() != Material.SUNFLOWER) continue;
-
-            ItemMeta meta = stack.getItemMeta();
-            if (meta == null) continue;
-
-            PersistentDataContainer container = meta.getPersistentDataContainer();
-            Double existingAmount = container.get(
-                    XfeaturesRPGMoney.instance.getNameKey(),
-                    PersistentDataType.DOUBLE
-            );
-
-            if (existingAmount != null) {
-                amount += existingAmount;
-                entity.remove();
-                break;
+                        if (existingAmount != null) {
+                            item.remove();
+                            amount += existingAmount;
+                        }
+                    }
+                }
             }
         }
 
-        return amount;
+        createAndDropMoneyItem(loc, amount);
     }
 
     private static void createAndDropMoneyItem(Location loc, double amount) {
@@ -71,7 +62,8 @@ public final class MoneyUtil {
         ItemMeta meta = item.getItemMeta();
 
         if (meta != null) {
-            String displayName = "§e" + formatMoney(amount) + " монет";
+            String displayName = XfeaturesRPGMoney.instance.messagesConfig.format("money-item-name", "amount", amount);
+
             net.kyori.adventure.text.Component nameComponent =
                     net.kyori.adventure.text.Component.text(displayName);
             meta.displayName(nameComponent);
@@ -86,8 +78,10 @@ public final class MoneyUtil {
 
         Item droppedItem = loc.getWorld().dropItemNaturally(loc, item);
 
+        String customName = XfeaturesRPGMoney.instance.messagesConfig.format("money-item-name", "amount", amount);
+
         net.kyori.adventure.text.Component customNameComponent =
-                net.kyori.adventure.text.Component.text("§e" + formatMoney(amount) + " монет");
+                net.kyori.adventure.text.Component.text(customName);
         droppedItem.customName(customNameComponent);
 
         droppedItem.setCustomNameVisible(true);
@@ -95,10 +89,14 @@ public final class MoneyUtil {
     }
 
     public static double getRandomInRange(double min, double max) {
-        return RANDOM.nextDouble(min, max);
+        return min + (max - min) * random.nextDouble();
     }
 
     public static String formatMoney(double amount) {
         return String.format("%.2f", amount);
+    }
+
+    public static String formatMoneyWithCurrency(double amount) {
+        return CurrencyFormatter.format(amount);
     }
 }

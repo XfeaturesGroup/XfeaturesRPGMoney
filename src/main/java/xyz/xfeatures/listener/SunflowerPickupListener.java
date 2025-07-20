@@ -8,6 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import xyz.xfeatures.XfeaturesRPGMoney;
 import net.md_5.bungee.api.ChatMessageType;
@@ -19,7 +21,11 @@ public class SunflowerPickupListener implements Listener {
         if (!(e.getEntity() instanceof Player)) return;
         Item item = e.getItem();
         if (item.getItemStack().getType() != Material.SUNFLOWER) return;
-        Double amount = item.getItemStack().getItemMeta().getPersistentDataContainer()
+        
+        ItemMeta meta = item.getItemStack().getItemMeta();
+        if (meta == null) return;
+        
+        Double amount = meta.getPersistentDataContainer()
                 .get(new NamespacedKey(XfeaturesRPGMoney.instance, "money"), PersistentDataType.DOUBLE);
         if (amount == null) return;
 
@@ -34,9 +40,10 @@ public class SunflowerPickupListener implements Listener {
         }
 
         if (XfeaturesRPGMoney.instance.mainConfig.isShowActionBarMessages()) {
+            String message = XfeaturesRPGMoney.instance.messagesConfig.format("pickup", "amount", amount);
             player.spigot().sendMessage(
                     ChatMessageType.ACTION_BAR,
-                    new TextComponent("§eВы подняли " + String.format("%.2f", amount) + " монет!")
+                    new TextComponent(message)
             );
         }
     }

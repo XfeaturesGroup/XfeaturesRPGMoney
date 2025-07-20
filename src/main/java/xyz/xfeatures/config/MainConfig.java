@@ -10,12 +10,15 @@ public class MainConfig {
     private final Plugin plugin;
     private double dropChance;
     private boolean showActionBarMessages;
+    private boolean showFortuneMultiplierMessages;
+    private boolean showLootingMultiplierMessages;
     private double playerDeathDropPercentage;
     private Map<Integer, Double> fortuneMultipliers;
     private Map<Integer, Double> lootingMultipliers;
     private double maxMoneyDrop;
     private boolean combineNearbyDrops;
     private double combineRadius;
+    private double spawnerMultiplier;
 
     public MainConfig(Plugin plugin) {
         this.plugin = plugin;
@@ -31,6 +34,14 @@ public class MainConfig {
         
         if (!config.contains("show-action-bar-messages")) {
             config.set("show-action-bar-messages", true);
+        }
+        
+        if (!config.contains("show-fortune-multiplier-messages")) {
+            config.set("show-fortune-multiplier-messages", false);
+        }
+        
+        if (!config.contains("show-looting-multiplier-messages")) {
+            config.set("show-looting-multiplier-messages", false);
         }
         
         if (!config.contains("player-death-drop-percentage")) {
@@ -77,6 +88,8 @@ public class MainConfig {
 
         dropChance = config.getDouble("drop-chance");
         showActionBarMessages = config.getBoolean("show-action-bar-messages");
+        showFortuneMultiplierMessages = config.getBoolean("show-fortune-multiplier-messages");
+        showLootingMultiplierMessages = config.getBoolean("show-looting-multiplier-messages");
         playerDeathDropPercentage = config.getDouble("player-death-drop-percentage");
         maxMoneyDrop = config.getDouble("max-money-drop");
         combineNearbyDrops = config.getBoolean("combine-nearby-drops");
@@ -111,6 +124,14 @@ public class MainConfig {
 
     public boolean isShowActionBarMessages() {
         return showActionBarMessages;
+    }
+
+    public boolean isShowFortuneMultiplierMessages() {
+        return showFortuneMultiplierMessages;
+    }
+
+    public boolean isShowLootingMultiplierMessages() {
+        return showLootingMultiplierMessages;
     }
 
     public double getPlayerDeathDropPercentage() {

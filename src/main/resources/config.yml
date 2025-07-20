@@ -6,6 +6,10 @@ drop-chance: 0.75 # Вероятность выпадения монет при 
 show-action-bar-messages: true # Показывать сообщения при подборе монет в Action Bar
 player-death-drop-percentage: 0.07 # Коэффициент выпадения монет из убитого игрока
 
+# Сообщения о множителях
+show-fortune-multiplier-messages: false
+show-looting-multiplier-messages: false
+
 # Множители для зачарования "Удача"
 fortune-multipliers:
   1: 1.25  # Удача I - увеличивает выпадение монет на 25%

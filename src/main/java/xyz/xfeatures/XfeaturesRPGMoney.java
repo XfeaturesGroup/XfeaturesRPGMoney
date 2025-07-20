@@ -21,13 +21,24 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
     public MessagesConfig messagesConfig;
     public MainConfig mainConfig;
     public PlayerData playerData;
+    public ArcheologyConfig archeologyConfig;
 
     @Override
     public void onEnable() {
         instance = this;
 
-        if (!setupEconomy()) {
+        getLogger().info("Инициализация XfeaturesRPGMoney v" + getDescription().getVersion());
+
+        if (getServer().getPluginManager().getPlugin("Vault") == null) {
             getLogger().severe("Vault не найден! Плагин отключается.");
+            getLogger().severe("Пожалуйста, установите Vault: https://www.spigotmc.org/resources/vault.34315/");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
+        if (!setupEconomy()) {
+            getLogger().severe("Не удалось настроить экономику! Плагин отключается.");
+            getLogger().severe("Убедитесь, что у вас установлен совместимый плагин экономики (например, Essentials, CMI)");
             getServer().getPluginManager().disablePlugin(this);
             return;
         }
@@ -42,8 +53,11 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
         getServer().getPluginManager().registerEvents(new SunflowerPickupListener(), this);
         getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+        getServer().getPluginManager().registerEvents(new ArcheologyListener(this), this);
 
         getCommand("rpgmoney").setExecutor(new RPGMoneyCommand(this));
+    
+        getLogger().info("XfeaturesRPGMoney успешно загружен!");
     }
     
     private void loadConfigs() {
@@ -52,23 +66,44 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
         blockConfig = new BlockConfig(this);
         messagesConfig = new MessagesConfig(this);
         mainConfig = new MainConfig(this);
+        archeologyConfig = new ArcheologyConfig(this);
     }
     
     public void reloadConfigs() {
         reloadConfig();
-        loadConfigs();
+        mobConfig = new MobConfig(this);
+        fishConfig = new FishConfig(this);
+        blockConfig = new BlockConfig(this);
+        messagesConfig = new MessagesConfig(this);
+        mainConfig.loadConfig();
+        archeologyConfig = new ArcheologyConfig(this);
     }
 
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
+            getLogger().severe("Vault плагин не найден! Убедитесь, что Vault установлен и загружен.");
             return false;
         }
-        RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
-        if (rsp == null) {
+        
+        try {
+            RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
+            if (rsp == null) {
+                getLogger().severe("Не удалось найти экономический провайдер Vault. Убедитесь, что установлен совместимый плагин экономики (например, Essentials, CMI).");
+                return false;
+            }
+            economy = rsp.getProvider();
+            if (economy != null) {
+                getLogger().info("Успешно подключен к экономике через Vault: " + economy.getName());
+                return true;
+            } else {
+                getLogger().severe("Не удалось получить провайдер экономики от Vault.");
+                return false;
+            }
+        } catch (Exception e) {
+            getLogger().severe("Произошла ошибка при настройке экономики: " + e.getMessage());
+            e.printStackTrace();
             return false;
         }
-        economy = rsp.getProvider();
-        return economy != null;
     }
 
     @Override
