@@ -1,0 +1,49 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# 命令消息
+no-permission: "&c您没有权限使用此命令。"
+player-only: "&c此命令仅对玩家可用。"
+config-reloaded: "&a配置已成功重新加载。"
+invalid-page-format: "&c无效的页面格式。请使用数字。"
+no-data-for-page: "&c此页面没有数据。"
+
+# 统计消息
+stats-header: "&7===== &c您的统计信息 &7====="
+stats-collected: "&e收集的货币: &6%amount%"
+
+# 玩家排行榜消息
+top-header: "&7===== &c玩家排行榜 (第 %page% 页) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% 货币"
+top-next-page: "&7使用 &c/rpgmoney top %page% &7查看下一页"
+
+# 插件信息消息
+info-header: "&7===== &c插件信息 &7====="
+info-version: "&c版本: &7%version%"
+info-author: "&c作者: &7%authors%"
+info-fortune-header: "&c幸运倍数:"
+info-fortune-entry: "&c等级 %level%: &7+%percent% 货币"
+info-looting-header: "&c掠夺倍数:"
+info-looting-entry: "&c等级 %level%: &7+%percent% 货币"
+
+# 帮助消息
+help-header: "&7===== &cXfeaturesRPGMoney 帮助 &7====="
+help-reload: "&c/rpgmoney reload &7- 重新加载配置"
+help-stats: "&c/rpgmoney stats &7- 显示您的统计信息"
+help-top: "&c/rpgmoney top [页面] &7- 显示玩家排行榜"
+help-info: "&c/rpgmoney info &7- 插件信息"
+
+# 货币拾取消息
+currency-name: 货币
+pickup: "&e您拾取了 %amount% 货币！"
+currency-pickup: "&e您拾取了 %amount% 货币！"
+money-item-name: "&e%amount% 货币"
+money-drop: "&e您掉落了 %amount% 货币！"
+fishing-reward: "&e您钓到了 %amount% 货币！"
+mining-reward: "&e您挖掘了 %amount% 货币！"
+entity-kill-reward: "&e您因击杀而获得 %amount% 货币！"
+player-kill-reward: "&e您因击杀玩家而获得 %amount% 货币！"
+player-death-drop: "&c您在死亡时失去了 %amount% 货币！"
+currency-format: "%amount% 货币"
+currency-singular: 货币
+currency-plural: 货币
+currency-few: 货币 # 对于中文语法 (2-4 货币)

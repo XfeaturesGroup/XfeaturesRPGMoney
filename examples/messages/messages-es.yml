@@ -1,0 +1,49 @@
+prefijo: "&c[XfeaturesRPGMoney]&r"
+
+# Mensajes de comandos
+sin permiso: "&cNo tienes permiso para usar este comando."
+solo para jugadores: "&cEste comando solo está disponible para los jugadores."
+configuración recargada: "&aLa configuración se ha recargado correctamente."
+invalid-page-format: "&cFormato de página incorrecto. Utilice un número".
+no-data-for-page: "&cNo hay datos para esta página".
+
+# Mensajes de estadísticas
+stats-header: "&7===== &cSus estadísticas &7====="
+stats-collected: "&eMonedas recogidas: &6%amount%"
+
+# Mensajes de los mejores jugadores
+top-header: "&7===== &cMejores jugadores (Página %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% monedas"
+top-next-page: "&7Utilice &c/rpgmoney top %page% &7para pasar a la página siguiente"
+
+# Mensajes de información sobre el complemento
+info-header: "&7===== &cInformación sobre el complemento &7====="
+info-version: "&cVersión: &7%version%"
+info-author: "&cAutores: &7%authors%"
+info-fortune-header: "&cMultiplicadores de suerte:"
+info-fortune-entry: "&cNivel %level%: &7+%percent% monedas"
+info-looting-header: "&cMultiplicadores de botín:"
+info-looting-entry: "&cNivel %level%: &7+%percent% monedas"
+
+# Mensajes de ayuda
+help-header: "&7===== &cXfeaturesRPGMoney Ayuda &7====="
+help-reload: "&c/rpgmoney reload &7- Recargar la configuración"
+help-stats: "&c/rpgmoney stats &7- Mostrar tus estadísticas"
+help-top: "&c/rpgmoney top [página] &7- Mostrar los mejores jugadores"
+help-info: "&c/rpgmoney info &7- Información sobre el complemento"
+
+# Mensajes sobre la obtención de monedas
+currency-name: monedas
+pickup: "¡Has recogido %amount% monedas!"
+currency-pickup: "¡Has recogido %amount% monedas!"
+money-item-name: "%amount% monedas"
+money-drop: "¡Has conseguido %amount% monedas!"
+fishing-reward: "¡Has pescado %amount% monedas!"
+mining-reward: "¡Has extraído %amount% monedas!"
+entity-kill-reward: "¡Has obtenido %amount% monedas por matar!"
+player-kill-reward: "¡Has obtenido %amount% monedas por matar a un jugador!"
+player-death-drop: "¡Has perdido %amount% monedas al morir!"
+currency-format: "%amount% monedas"
+currency-singular: moneda
+currency-plural: monedas
+currency-few: monedas # Para la gramática rusa (2-4 monedas)

@@ -1,0 +1,49 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Befehlsnachrichten
+no-permission: "&cSie haben nicht die Berechtigung, diesen Befehl zu verwenden."
+player-only: "&cDieser Befehl ist nur für Spieler verfügbar."
+config-reloaded: "&aKonfiguration erfolgreich neu geladen."
+invalid-page-format: "&cUngültiges Seitenformat. Bitte verwenden Sie eine Zahl."
+no-data-for-page: "&cEs sind keine Daten für diese Seite vorhanden."
+
+# Statistiken Nachrichten
+stats-header: "&7===== &cIhre Statistik &7====="
+stats-collected: "&eGesammeltes Geld: &6%amount%"
+
+# Spieler-Ranglisten Nachrichten
+top-header: "&7===== &cSpieler-Rangliste (Seite %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% Geld"
+top-next-page: "&7Verwenden Sie &c/rpgmoney top %page% &7für die nächste Seite"
+
+# Plugin-Informationsnachrichten
+info-header: "&7===== &cPlugin-Informationen &7====="
+info-version: "&cVersion: &7%version%"
+info-author: "&cAutoren: &7%authors%"
+info-fortune-header: "&cGlücksmultiplikatoren:"
+info-fortune-entry: "&cStufe %level%: &7+%percent% Geld"
+info-looting-header: "&cBeute-Multiplikatoren:"
+info-looting-entry: "&cStufe %level%: &7+%percent% Geld"
+
+# Hilfenachrichten
+help-header: "&7===== &cXfeaturesRPGMoney Hilfe &7====="
+help-reload: "&c/rpgmoney reload &7- Konfiguration neu laden"
+help-stats: "&c/rpgmoney stats &7- Ihre Statistik anzeigen"
+help-top: "&c/rpgmoney top [Seite] &7- Spieler-Rangliste anzeigen"
+help-info: "&c/rpgmoney info &7- Plugin-Informationen"
+
+# Geldabholnachrichten
+currency-name: Geld
+pickup: "&eSie haben %amount% Geld aufgehoben!"
+currency-pickup: "&eSie haben %amount% Geld aufgehoben!"
+money-item-name: "&e%amount% Geld"
+money-drop: "&eSie haben %amount% Geld fallen lassen!"
+fishing-reward: "&eSie haben %amount% Geld gefangen!"
+mining-reward: "&eSie haben %amount% Geld abgebaut!"
+entity-kill-reward: "&eSie haben %amount% Geld für den Kill erhalten!"
+player-kill-reward: "&eSie haben %amount% Geld für den Kill eines Spielers erhalten!"
+player-death-drop: "&cSie haben %amount% Geld beim Sterben verloren!"
+currency-format: "%amount% Geld"
+currency-singular: Geld
+currency-plural: Geld
+currency-few: Geld # Für die deutsche Grammatik (2-4 Geld)

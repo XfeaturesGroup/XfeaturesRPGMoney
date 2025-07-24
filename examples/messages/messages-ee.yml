@@ -1,0 +1,49 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Käskude sõnumid
+no-permission: "&cTeil ei ole õigust seda käsku kasutada."
+player-only: "&cSee käsk on saadaval ainult mängijatele."
+config-reloaded: "&aKonfiguratsioon on edukalt uuesti laaditud."
+invalid-page-format: "&cVale lehe formaat. Palun kasutage numbrit."
+no-data-for-page: "&cSellel lehel ei ole andmeid."
+
+# Statistika sõnumid
+stats-header: "&7===== &cTeie statistika &7====="
+stats-collected: "&eKogutud raha: &6%amount%"
+
+# Mängijate edetabeli sõnumid
+top-header: "&7===== &cMängijate edetabel (Leht %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% raha"
+top-next-page: "&7Kasutage &c/rpgmoney top %page% &7järgmise lehe jaoks"
+
+# Plugina teabe sõnumid
+info-header: "&7===== &cPlugina teave &7====="
+info-version: "&cVersioon: &7%version%"
+info-author: "&cAutorid: &7%authors%"
+info-fortune-header: "&cÕnne kordajad:"
+info-fortune-entry: "&cTase %level%: &7+%percent% raha"
+info-looting-header: "&cRöövimise kordajad:"
+info-looting-entry: "&cTase %level%: &7+%percent% raha"
+
+# Abi sõnumid
+help-header: "&7===== &cXfeaturesRPGMoney Abi &7====="
+help-reload: "&c/rpgmoney reload &7- Laadi konfiguratsioon uuesti"
+help-stats: "&c/rpgmoney stats &7- Näita oma statistikat"
+help-top: "&c/rpgmoney top [leht] &7- Näita mängijate edetabelit"
+help-info: "&c/rpgmoney info &7- Plugina teave"
+
+# Raha korjamise sõnumid
+currency-name: raha
+pickup: "&eTe korjasite %amount% raha!"
+currency-pickup: "&eTe korjasite %amount% raha!"
+money-item-name: "&e%amount% raha"
+money-drop: "&eTe kukutasite %amount% raha!"
+fishing-reward: "&eTe püüdsid %amount% raha!"
+mining-reward: "&eTe kaevandate %amount% raha!"
+entity-kill-reward: "&eTe saite %amount% raha tapmise eest!"
+player-kill-reward: "&eTe saite %amount% raha mängija tapmise eest!"
+player-death-drop: "&cTe kaotasite %amount% raha surma tõttu!"
+currency-format: "%amount% raha"
+currency-singular: raha
+currency-plural: raha
+currency-few: raha # Eesti grammatika jaoks (2-4 raha)

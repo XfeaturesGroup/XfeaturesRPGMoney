@@ -1,0 +1,49 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Сообщения команд
+no-permission: "&cУ вас нет прав на использование этой команды."
+player-only: "&cЭта команда доступна только для игроков."
+config-reloaded: "&aКонфигурация успешно перезагружена."
+invalid-page-format: "&cНеверный формат страницы. Используйте число."
+no-data-for-page: "&cНет данных для этой страницы."
+
+# Сообщения статистики
+stats-header: "&7===== &cВаша статистика &7====="
+stats-collected: "&eСобрано монет: &6%amount%"
+
+# Сообщения топа игроков
+top-header: "&7===== &cТоп игроков (Страница %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% монет"
+top-next-page: "&7Используйте &c/rpgmoney top %page% &7для следующей страницы"
+
+# Сообщения информации о плагине
+info-header: "&7===== &cИнформация о плагине &7====="
+info-version: "&cВерсия: &7%version%"
+info-author: "&cАвторы: &7%authors%"
+info-fortune-header: "&cМножители удачи:"
+info-fortune-entry: "&cУровень %level%: &7+%percent% монет"
+info-looting-header: "&cМножители добычи:"
+info-looting-entry: "&cУровень %level%: &7+%percent% монет"
+
+# Сообщения помощи
+help-header: "&7===== &cXfeaturesRPGMoney Помощь &7====="
+help-reload: "&c/rpgmoney reload &7- Перезагрузить конфигурацию"
+help-stats: "&c/rpgmoney stats &7- Показать вашу статистику"
+help-top: "&c/rpgmoney top [страница] &7- Показать топ игроков"
+help-info: "&c/rpgmoney info &7- Информация о плагине"
+
+# Сообщения о добыче монет
+currency-name: монет
+pickup: "&eВы подняли %amount% монет!"
+currency-pickup: "&eВы подняли %amount% монет!"
+money-item-name: "&e%amount% монет"
+money-drop: "&eВы выбили %amount% монет!"
+fishing-reward: "&eВы выловили %amount% монет!"
+mining-reward: "&eВы добыли %amount% монет!"
+entity-kill-reward: "&eВы получили %amount% монет за убийство!"
+player-kill-reward: "&eВы получили %amount% монет за убийство игрока!"
+player-death-drop: "&cВы потеряли %amount% монет при смерти!"
+currency-format: "%amount% монет"
+currency-singular: монета
+currency-plural: монет
+currency-few: монеты # Для русской грамматики (2-4 монеты)

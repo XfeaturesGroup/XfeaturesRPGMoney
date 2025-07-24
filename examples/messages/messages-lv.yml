@@ -1,0 +1,49 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Komandu ziņojumi
+no-permission: "&cJums nav tiesību izmantot šo komandu."
+player-only: "&cŠī komanda ir pieejama tikai spēlētājiem."
+config-reloaded: "&aKonfigurācija veiksmīgi pārlādēta."
+invalid-page-format: "&cNepareizs lapas formāts. Izmantojiet skaitli."
+no-data-for-page: "&cNav datu šai lapai."
+
+# Statistikas ziņojumi
+stats-header: "&7===== &cTava statistika &7====="
+stats-collected: "&eSavāktas monētas: &6%amount%"
+
+# Topa spēlētāju ziņojumi
+top-header: "&7===== &cTopa spēlētāji (Lapa %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% monētu"
+top-next-page: "&7Izmantojiet &c/rpgmoney top %page% &7, lai pārietu uz nākamo lapu"
+
+# Ziņojumi par spraudni
+info-header: "&7===== &cInformācija par spraudni &7====="
+info-version: "&cVersija: &7%version%"
+info-author: "&cAutori: &7%authors%"
+info-fortune-header: "&cVeiksmes reizinātāji:"
+info-fortune-entry: "&cLīmenis %level%: &7+%percent% monētu"
+info-looting-header: "&cLaupījuma reizinātāji:"
+info-looting-entry: "&cLīmenis %level%: &7+%percent% monētu"
+
+# Palīdzības ziņojumi
+help-header: "&7===== &cXfeaturesRPGMoney Palīdzība &7====="
+help-reload: "&c/rpgmoney reload &7- Pārlādēt konfigurāciju"
+help-stats: "&c/rpgmoney stats &7- Parādīt jūsu statistiku"
+help-top: "&c/rpgmoney top [lapu] &7- Parādīt labākos spēlētājus"
+help-info: "&c/rpgmoney info &7- Informācija par spraudni"
+
+# Ziņojumi par monētu ieguvi
+currency-name: monētas
+pickup: "&eJūs pacēlāt %amount% monētu!"
+currency-pickup: "&eJūs pacēlāt %amount% monētu!"
+money-item-name: "&e%amount% monētu"
+money-drop: "&eJūs izsita %amount% monētu!"
+fishing-reward: "&eJūs nozvejojāt %amount% monētu!"
+mining-reward: "&eJūs ieguvis %amount% monētu!"
+entity-kill-reward: "&eJūs saņēmāt %amount% monētu par nogalināšanu!"
+player-kill-reward: "&eJūs saņēmāt %amount% monētu par spēlētāja nogalināšanu!"
+player-death-drop: "&cJūs zaudējāt %amount% monētu, mirot!"
+currency-format: "%amount% monētu"
+currency-singular: monēta
+currency-plural: monētas
+currency-few: monētas # Krievu gramatikai (2-4 monētas)
