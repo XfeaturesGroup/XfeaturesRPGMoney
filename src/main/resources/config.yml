@@ -1,23 +1,33 @@
-# Коэффициент выпадения монет из мобов из спавнера
-spawner-percent: 0.6
+# All available languages can be found here:
+# https://github.com/XfeaturesGroup/XfeaturesRPGMoney/tree/master/examples/messages
+# Language settings for the plugin
+language: "en"
 
-# Основные настройки плагина
-drop-chance: 0.75 # Вероятность выпадения монет при добыче блоков и убийстве мобов
-show-action-bar-messages: true # Показывать сообщения при подборе монет в Action Bar
-player-death-drop-percentage: 0.07 # Коэффициент выпадения монет из убитого игрока
+# Coin drop rate from mobs spawned by spawners
+spawner-multiplier: 0.6
 
-# Сообщения о множителях
+# Main plugin settings
+drop-chance: 0.75 # Probability of coins dropping when mining blocks and killing mobs
+show-action-bar-messages: true # Show messages when picking up coins in the Action Bar
+player-death-drop-percentage: 0.07 # Coin drop rate from killed players
+max-money-drop: 1000.0 # Maximum amount of money in a single coin
+
+# Settings for combining nearby drops
+combine-nearby-drops: true
+combine-radius: 1.5
+
+# Messages about multipliers
 show-fortune-multiplier-messages: false
 show-looting-multiplier-messages: false
 
-# Множители для зачарования "Удача"
+# Multipliers for the “Fortune” enchantment
 fortune-multipliers:
-  1: 1.25  # Удача I - увеличивает выпадение монет на 25%
-  2: 1.5   # Удача II - увеличивает выпадение монет на 50%
-  3: 1.75  # Удача III - увеличивает выпадение монет на 75%
+  1: 1.25  # Fortune I - increases coin drop rate by 25%
+  2: 1.5   # Fortune II - increases coin drop rate by 50%
+  3: 1.75  # Fortune III - increases coin drop rate by 75%
 
-# Множители для зачарования "Добыча"
+# Multipliers for “Looting” enchantments
 looting-multipliers:
-  1: 1.25  # Добыча I - увеличивает выпадение монет на 25%
-  2: 1.5   # Добыча II - увеличивает выпадение монет на 50%
-  3: 1.75  # Добыча III - увеличивает выпадение монет на 75%
+  1: 1.25  # Looting I - increases coin drop rate by 25%
+  2: 1.5   # Looting II - increases coin drop rate by 50%
+  3: 1.75  # Looting III - increases coin drop rate by 75%

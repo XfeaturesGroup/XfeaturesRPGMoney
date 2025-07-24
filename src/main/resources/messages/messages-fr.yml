@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Messages de commande
+no-permission: "&cVous n'avez pas la permission d'utiliser cette commande."
+player-only: "&cCette commande est uniquement disponible pour les joueurs."
+config-reloaded: "&aConfiguration rechargée avec succès."
+invalid-page-format: "&cFormat de page invalide. Veuillez utiliser un nombre."
+no-data-for-page: "&cIl n'y a pas de données pour cette page."
+
+# Messages de statistiques
+stats-header: "&7===== &cVos statistiques &7====="
+stats-collected: "&eArgent collecté: &6%amount%"
+
+# Messages de classement des joueurs
+top-header: "&7===== &cClassement des joueurs (Page %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% argent"
+top-next-page: "&7Utilisez &c/rpgmoney top %page% &7pour la page suivante"
+
+# Messages d'information du plugin
+info-header: "&7===== &cInformations sur le plugin &7====="
+info-version: "&cVersion: &7%version%"
+info-author: "&cAuteurs: &7%authors%"
+info-fortune-header: "&cMultiplicateurs de Fortune:"
+info-fortune-entry: "&cNiveau %level%: &7+%percent% argent"
+info-looting-header: "&cMultiplicateurs de Butin:"
+info-looting-entry: "&cNiveau %level%: &7+%percent% argent"
+
+# Messages d'aide
+help-header: "&7===== &cAide XfeaturesRPGMoney &7====="
+help-reload: "&c/rpgmoney reload &7- Recharger la configuration"
+help-stats: "&c/rpgmoney stats &7- Afficher vos statistiques"
+help-top: "&c/rpgmoney top [page] &7- Afficher le classement des joueurs"
+help-info: "&c/rpgmoney info &7- Informations sur le plugin"
+help-language: "&c/rpgmoney language <langue> &7- Changer la langue du plugin"
+
+# Messages de collecte d'argent
+currency-name: Argent
+pickup: "&eVous avez ramassé %amount% argent!"
+currency-pickup: "&eVous avez ramassé %amount% argent!"
+money-item-name: "&e%amount% argent"
+money-drop: "&eVous avez laissé tomber %amount% argent!"
+fishing-reward: "&eVous avez pêché %amount% argent!"
+mining-reward: "&eVous avez miné %amount% argent!"
+entity-kill-reward: "&eVous avez reçu %amount% argent pour ce meurtre!"
+player-kill-reward: "&eVous avez reçu %amount% argent pour avoir tué un joueur!"
+player-death-drop: "&cVous avez perdu %amount% argent en mourant!"
+currency-format: "%amount% argent"
+currency-singular: argent
+currency-plural: argent
+
+# Messages de langue
+language-usage: "&cUtilisation: /rpgmoney language <langue>"
+language-not-found: "&cLangue %language% non trouvée."
+language-changed: "&aLangue changée en %language%."

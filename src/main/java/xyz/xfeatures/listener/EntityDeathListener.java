@@ -70,8 +70,7 @@ public class EntityDeathListener implements Listener {
         MoneyUtil.dropMoney(player.getLocation(), amountToDrop);
         
         if (XfeaturesRPGMoney.instance.mainConfig.isShowActionBarMessages()) {
-            String message = XfeaturesRPGMoney.instance.messagesConfig.get("death-money-drop");
-            message = CurrencyFormatter.replaceAmount(message, amountToDrop);
+            String message = XfeaturesRPGMoney.instance.messagesConfig.format("player-death-drop", "amount", amountToDrop);
             player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(message));
         }
     }

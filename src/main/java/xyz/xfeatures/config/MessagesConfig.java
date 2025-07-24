@@ -26,6 +26,7 @@ public class MessagesConfig {
     private final Map<String, String> cachedMessages = new HashMap<>();
     private final Pattern hexPattern = Pattern.compile("&#([A-Fa-f0-9]{6})");
     private final MiniMessage miniMessage = MiniMessage.miniMessage();
+    private String currentLanguage;
 
     public MessagesConfig(XfeaturesRPGMoney plugin) {
         this.plugin = plugin;
@@ -33,32 +34,59 @@ public class MessagesConfig {
     }
 
     public void loadConfig() {
-        if (configFile == null) {
-            configFile = new File(plugin.getDataFolder(), "messages.yml");
+        currentLanguage = plugin.mainConfig.getLanguage();
+
+        File messagesDir = new File(plugin.getDataFolder(), "messages");
+        if (!messagesDir.exists()) {
+            messagesDir.mkdirs();
+        }
+
+        configFile = new File(messagesDir, "messages-" + currentLanguage + ".yml");
+
+        if (!configFile.exists()) {
+            if (plugin.getResource("messages/messages-" + currentLanguage + ".yml") != null) {
+                plugin.saveResource("messages/messages-" + currentLanguage + ".yml", false);
+            } else {
+                plugin.getLogger().warning("Language file for '" + currentLanguage + "' not found. Using English as fallback.");
+                configFile = new File(messagesDir, "messages-en.yml");
+                
+                if (!configFile.exists() && plugin.getResource("messages/messages-en.yml") != null) {
+                    plugin.saveResource("messages/messages-en.yml", false);
+                }
+            }
         }
 
         if (!configFile.exists()) {
-            plugin.saveResource("messages.yml", false);
+            try {
+                configFile.createNewFile();
+                plugin.getLogger().warning("Created empty messages file: " + configFile.getName());
+            } catch (IOException e) {
+                plugin.getLogger().severe("Could not create messages file: " + e.getMessage());
+            }
         }
 
         config = YamlConfiguration.loadConfiguration(configFile);
 
-        InputStream defaultConfigStream = plugin.getResource("messages.yml");
+        InputStream defaultConfigStream = plugin.getResource("messages/messages-en.yml");
         if (defaultConfigStream != null) {
             YamlConfiguration defaultConfig = YamlConfiguration.loadConfiguration(
                     new InputStreamReader(defaultConfigStream, StandardCharsets.UTF_8));
 
+            boolean needsSave = false;
             for (String key : defaultConfig.getKeys(true)) {
                 if (!defaultConfig.isConfigurationSection(key) && !config.contains(key)) {
                     config.set(key, defaultConfig.get(key));
+                    needsSave = true;
                 }
             }
 
-            try {
-                config.save(configFile);
-            } catch (IOException e) {
-                plugin.getLogger().severe("Не удалось сохранить дефолтные сообщения в messages.yml");
-                e.printStackTrace();
+            if (needsSave) {
+                try {
+                    config.save(configFile);
+                } catch (IOException e) {
+                    plugin.getLogger().severe("Could not save default messages to " + configFile.getName());
+                    e.printStackTrace();
+                }
             }
         }
 

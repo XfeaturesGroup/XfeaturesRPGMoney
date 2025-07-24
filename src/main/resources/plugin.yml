@@ -1,5 +1,5 @@
 name: XfeaturesRPGMoney
-version: 1.1.0-SNAPSHOT
+version: 1.1.1-SNAPSHOT
 main: xyz.xfeatures.XfeaturesRPGMoney
 api-version: 1.13
 prefix: XFEATURES
@@ -12,7 +12,7 @@ softdepend: [Xfeatures, CMI, Essentials, EssentialsX]
 commands:
   rpgmoney:
     description: Main command for XfeaturesRPGMoney plugin
-    usage: /rpgmoney [reload|stats|top|info]
+    usage: /rpgmoney [reload|stats|top|info|language]
     aliases: [rpgm]
     permission: xfeatures.rpgmoney.use
 permissions:
@@ -25,3 +25,6 @@ permissions:
   xfeatures.rpgmoney.top:
     description: Allows viewing the top players
     default: true
+  xfeatures.rpgmoney.language:
+    description: Allows changing the plugin language
+    default: op

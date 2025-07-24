@@ -1,78 +1,135 @@
 # 💰 XfeaturesRPGMoney
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)
-![Spigot](https://img.shields.io/badge/spigot-1.13+-green.svg)
+![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)
+![Minecraft](https://img.shields.io/badge/minecraft-1.13%2B-brightgreen.svg)
+![Java](https://img.shields.io/badge/Java-21-orange.svg)
+![API](https://img.shields.io/badge/API-available-informational)
+![Vault](https://img.shields.io/badge/Vault-required-critical)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)
+![Discord](https://img.shields.io/discord/1252242781775335505?color=7289da&label=discord&logo=discord&logoColor=white)
+## 📝 Description
 
-## 📝 Описание
+**XfeaturesRPGMoney** is an innovative economic plugin for Minecraft servers that adds RPG elements to your server's economy. The plugin provides players with a variety of ways to earn in-game currency:
 
-**XfeaturesRPGMoney** - это инновационный экономический плагин для Minecraft серверов, который добавляет RPG-элементы в экономику вашего сервера. Плагин предоставляет игрокам разнообразные способы заработка внутриигровой валюты:
+- 💀 **Mob hunting**: earn money for killing various creatures
+- 🎣 **Fishing**: earn money by catching different types of fish
+- ⛏️ **Block mining**: get a chance to earn money when mining certain blocks
+- 🔍 **Archaeology**: get rewards for mining archaeological treasures
 
-- 💀 **Охота на мобов**: получайте деньги за убийство различных существ
-- 🎣 **Рыбалка**: зарабатывайте, ловя разные виды рыбы
-- ⛏️ **Добыча блоков**: шанс получить деньги при добыче определенных блоков
-- 🔍 **Археология**: получайте награды за добычу археологических ценностей
+The plugin is fully integrated with the Vault API, ensuring compatibility with most economic systems.
 
-Плагин полностью интегрируется с Vault API, обеспечивая совместимость с большинством экономических систем.
+## ✨ Key features
 
-## ✨ Основные возможности
+- **Flexible reward system**: customizable minimum and maximum amounts for each source of income
+- **Luck and loot multipliers**: Fortune and Looting enchantments increase the reward received
+- **Player statistics**: track money earned and create a ranking of the best players
+- **Visual effects**: animated appearance of coins in the game world
+- **Full message customization**: all notifications can be changed in the configuration
+- **Easy management**: intuitive commands for players and administrators
 
-- **Гибкая система наград**: настраиваемые минимальные и максимальные суммы для каждого источника дохода
-- **Множители удачи и добычи**: зачарования Fortune и Looting увеличивают получаемую награду
-- **Статистика игроков**: отслеживание заработанных денег и создание рейтинга лучших игроков
-- **Визуальные эффекты**: анимированное появление монет в игровом мире
-- **Полная настройка сообщений**: все уведомления можно изменить в конфигурации
-- **Простое управление**: интуитивно понятные команды для игроков и администраторов
-
-## 📋 Требования
+## 📋 Requirements
 
 - Spigot/Paper 1.13+
 - Vault
-- Любой экономический плагин, совместимый с Vault (например, EssentialsX, CMI)
+- Any economic plugin compatible with Vault (e.g., EssentialsX, CMI)
 
-## 🔧 Установка
+## 🔧 Installation
 
-1. Скачайте последнюю версию плагина из раздела [Releases](https://github.com/XfeaturesGroup/XfeaturesRPGMoney/releases)
-2. Поместите JAR-файл в папку `plugins` вашего сервера
-3. Перезапустите сервер
-4. Настройте конфигурационные файлы по вашему усмотрению
-5. Перезагрузите плагин командой `/rpgmoney reload`
+1. Download the latest version of the plugin from the [Releases](https://github.com/XfeaturesGroup/XfeaturesRPGMoney/releases) section
+2. Place the JAR file in the `plugins` folder of your server
+3. Restart the server
+4. Configure the configuration files as you see fit
+5. Reload the plugin with the command `/rpgmoney reload`
 
-## ⚙️ Конфигурация
+<details>
+<summary>
 
-После первого запуска плагин создаст следующие конфигурационные файлы:
+## 🌍 Supported Languages
+
+</summary>
+
+XfeaturesRPGMoney supports multiple languages for users from around the world. You can change the plugin language using the command `/rpgmoney language <language>`.
+
+### Available Languages:
+
+- English (en)
+- Russian (ru)
+- German (de)
+- Polish (pl)
+- Italian (it)
+- Portuguese (pt)
+- Turkish (tr)
+- French (fr)
+- Spanish (es)
+- Lithuanian (lt)
+- Latvian (lv)
+- Estonian (et)
+- Arabic (ar)
+- Hindi (hi)
+- Chinese (Simplified) (cn)
+
+### Adding a New Language
+
+If you want to add a new language or improve an existing translation:
+
+1. Copy the `messages-en.yml` file from the `resources/messages/` folder
+2. Rename it to `messages-XX.yml`, where XX is your language code
+3. Translate all strings to your language
+4. Submit the translation via Pull Request or contact the developers
+
+We always welcome new translations and improvements to existing ones!
+</details>
+
+<details>
+<summary>
+
+## ⚙️ Configuration
+
+</summary>
+
+After the first launch, the plugin will create the following configuration files:
 
 ### config.yml
-Основные настройки плагина, включая множители для зачарований:
+Basic plugin settings, including multipliers for enchantments:
 
 ```yaml
-# Коэффициент выпадения монет из мобов из спавнера
-spawner-percent: 0.6
+# All available languages can be found here:
+# https://github.com/XfeaturesGroup/XfeaturesRPGMoney/tree/master/examples/messages
+# Language settings for the plugin
+language: "en"
 
-# Основные настройки плагина
-drop-chance: 0.75 # Вероятность выпадения монет при добыче блоков и убийстве мобов
-show-action-bar-messages: true # Показывать сообщения при подборе монет в Action Bar
-player-death-drop-percentage: 0.07 # Коэффициент выпадения монет из убитого игрока
+# Coin drop rate from mobs spawned by spawners
+spawner-multiplier: 0.6
 
-# Сообщения о множителях
+# Main plugin settings
+drop-chance: 0.75 # Probability of coins dropping when mining blocks and killing mobs
+show-action-bar-messages: true # Show messages when picking up coins in the Action Bar
+player-death-drop-percentage: 0.07 # Coin drop rate from killed players
+max-money-drop: 1000.0 # Maximum amount of money in a single coin
+
+# Settings for combining nearby drops
+combine-nearby-drops: true
+combine-radius: 1.5
+
+# Messages about multipliers
 show-fortune-multiplier-messages: false
 show-looting-multiplier-messages: false
 
-# Множители для зачарования "Удача"
+# Multipliers for the “Fortune” enchantment
 fortune-multipliers:
-  1: 1.25  # Удача I - увеличивает выпадение монет на 25%
-  2: 1.5   # Удача II - увеличивает выпадение монет на 50%
-  3: 1.75  # Удача III - увеличивает выпадение монет на 75%
+  1: 1.25  # Fortune I - increases coin drop rate by 25%
+  2: 1.5   # Fortune II - increases coin drop rate by 50%
+  3: 1.75  # Fortune III - increases coin drop rate by 75%
 
-# Множители для зачарования "Добыча"
+# Multipliers for “Looting” enchantments
 looting-multipliers:
-  1: 1.25  # Добыча I - увеличивает выпадение монет на 25%
-  2: 1.5   # Добыча II - увеличивает выпадение монет на 50%
-  3: 1.75  # Добыча III - увеличивает выпадение монет на 75%
+  1: 1.25  # Looting I - increases coin drop rate by 25%
+  2: 1.5   # Looting II - increases coin drop rate by 50%
+  3: 1.75  # Looting III - increases coin drop rate by 75%
 ```
 
 ### mobs.yml
-Настройка наград за убийство мобов:
+Setting killing mobs rewards:
 
 ```yaml
 # ENTITY: [min, max]
@@ -160,7 +217,7 @@ ZOMBIFIED_PIGLIN: [5, 12]
 ```
 
 ### fishes.yml
-Настройка наград за рыбалку:
+Setting fishing rewards:
 
 ```yaml
 # LOOT: [min, max]
@@ -179,7 +236,7 @@ SADDLE: [15, 35]
 ```
 
 ### blocks.yml
-Настройка наград за добычу блоков:
+Setting block mining rewards:
 
 ```yaml
 # BLOCK: [min, max]
@@ -217,7 +274,7 @@ NETHER_QUARTZ_ORE: [8.75, 14]
 ANCIENT_DEBRIS: [87.5, 262.5]
 ```
 ### archeology.yml
-Настройка наград за археологию:
+Setting archaeology rewards:
 
 ```yaml
 # DROP: [min, max]
@@ -256,124 +313,153 @@ TRIM_PATTERN: [100, 125]
 ```
 
 ### messages.yml
-Настройка всех сообщений плагина:
+Configuring all plugin messages:
 
 ```yaml
 prefix: "&c[XfeaturesRPGMoney]&r"
 
-# Сообщения команд
-no-permission: "&cУ вас нет прав на использование этой команды."
-player-only: "&cЭта команда доступна только для игроков."
-config-reloaded: "&aКонфигурация успешно перезагружена."
-invalid-page-format: "&cНеверный формат страницы. Используйте число."
-no-data-for-page: "&cНет данных для этой страницы."
+# Command messages
+no-permission: "&cYou don't have permission to use this command."
+player-only: "&cThis command is only available for players."
+config-reloaded: "&aConfiguration successfully reloaded."
+invalid-page-format: "&cInvalid page format. Please use a number."
+no-data-for-page: "&cThere is no data for this page."
 
-# Сообщения статистики
-stats-header: "&7===== &cВаша статистика &7====="
-stats-collected: "&eСобрано монет: &6%amount%"
+# Stats messages
+stats-header: "&7===== &cYour Statistics &7====="
+stats-collected: "&eMoney collected: &6%amount%"
 
-# Сообщения топа игроков
-top-header: "&7===== &cТоп игроков (Страница %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% монет"
-top-next-page: "&7Используйте &c/rpgmoney top %page% &7для следующей страницы"
+# Top players messages
+top-header: "&7===== &cPlayer Rankings (Page %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% money"
+top-next-page: "&7Use &c/rpgmoney top %page% &7for the next page"
 
-# Сообщения информации о плагине
-info-header: "&7===== &cИнформация о плагине &7====="
-info-version: "&cВерсия: &7%version%"
-info-author: "&cАвторы: &7%authors%"
-info-fortune-header: "&cМножители удачи:"
-info-fortune-entry: "&cУровень %level%: &7+%percent%% монет"
-info-looting-header: "&cМножители добычи:"
-info-looting-entry: "&cУровень %level%: &7+%percent%% монет"
+# Plugin info messages
+info-header: "&7===== &cPlugin Information &7====="
+info-version: "&cVersion: &7%version%"
+info-author: "&cAuthors: &7%authors%"
+info-fortune-header: "&cFortune Multipliers:"
+info-fortune-entry: "&cLevel %level%: &7+%percent% money"
+info-looting-header: "&cLooting Multipliers:"
+info-looting-entry: "&cLevel %level%: &7+%percent% money"
 
-# Сообщения помощи
-help-header: "&7===== &cXfeaturesRPGMoney Помощь &7====="
-help-reload: "&c/rpgmoney reload &7- Перезагрузить конфигурацию"
-help-stats: "&c/rpgmoney stats &7- Показать вашу статистику"
-help-top: "&c/rpgmoney top [страница] &7- Показать топ игроков"
-help-info: "&c/rpgmoney info &7- Информация о плагине"
+# Help messages
+help-header: "&7===== &cXfeaturesRPGMoney Help &7====="
+help-reload: "&c/rpgmoney reload &7- Reload configuration"
+help-stats: "&c/rpgmoney stats &7- Display your statistics"
+help-top: "&c/rpgmoney top [page] &7- Display player rankings"
+help-info: "&c/rpgmoney info &7- Plugin information"
+help-language: "&c/rpgmoney language <language> &7- Change plugin language"
 
-# Сообщения о добыче монет
-currency-name: "монет"
-pickup: "&eВы подняли %amount% монет!"
-currency-pickup: "&eВы подняли %amount% монет!"
-money-item-name: "&e%amount% монет"
-money-drop: "&eВы выбили %amount% монет!"
-fishing-reward: "&eВы выловили %amount% монет!"
-mining-reward: "&eВы добыли %amount% монет!"
-entity-kill-reward: "&eВы получили %amount% монет за убийство!"
-player-kill-reward: "&eВы получили %amount% монет за убийство игрока!"
-player-death-loss: "&cВы потеряли %amount% монет при смерти!"
-currency-format: "%amount% монет"
-currency-singular: "монета"
-currency-plural: "монет"
-currency-few: "монеты"  # Для русской грамматики (2-4 монеты)
+# Money collection messages
+currency-name: Money
+pickup: "&eYou picked up %amount% money!"
+currency-pickup: "&eYou picked up %amount% money!"
+money-item-name: "&e%amount% money"
+money-drop: "&eYou dropped %amount% money!"
+fishing-reward: "&eYou fished %amount% money!"
+mining-reward: "&eYou mined %amount% money!"
+entity-kill-reward: "&eYou received %amount% money for this kill!"
+player-kill-reward: "&eYou received %amount% money for killing a player!"
+player-death-drop: "&cYou lost %amount% money by dying!"
+currency-format: "%amount% money"
+currency-singular: money
+currency-plural: money
+
+# Language messages
+language-usage: "&cUsage: /rpgmoney language <language>"
+language-not-found: "&cLanguage %language% not found."
+language-changed: "&aLanguage changed to %language%."
 ```
+</details>
 
-## 📜 Команды
-| Команда | Описание | Права |
+## 📜 Commands
+| Command | Description | Permissions |
 |---------|----------|-------|
-| `/rpgmoney reload` | Перезагрузить конфигурацию | `xfeatures.rpgmoney.reload` |
-| `/rpgmoney stats` | Показать вашу статистику | - |
-| `/rpgmoney top [страница]` | Показать топ игроков | `xfeatures.rpgmoney.top` |
-| `/rpgmoney info` | Информация о плагине | - |
+| `/rpgmoney reload` | Reload configuration | `xfeatures.rpgmoney.reload` |
+| `/rpgmoney stats` | Show your stats | - |
+| `/rpgmoney top [page]` | Show top players | `xfeatures.rpgmoney.top` |
+| `/rpgmoney info` | Plugin information | - |
+| `/rpgmoney language <language>` | Change plugin language | `xfeatures.rpgmoney.language` |
 
-## 🔒 Права доступа
-- xfeatures.rpgmoney.reload - Доступ к команде перезагрузки
-- xfeatures.rpgmoney.top - Доступ к просмотру топа игроков
-- xfeatures.rpgmoney.admin - Полный доступ ко всем функциям плагина
+## 🔒 Permissions
+- xfeatures.rpgmoney.reload - Access to the reload command
+- xfeatures.rpgmoney.top - Access to view the top players
+- xfeatures.rpgmoney.admin - Full access to all plugin features
+- xfeatures.rpgmoney.language - Access to change the plugin language
 
-## 🛠️ API для разработчиков
-Плагин предоставляет API для интеграции с другими плагинами:
+## 🛠️ API for developers
+The plugin provides an API for integration with other plugins:
 
 ```java
-// Получение экземпляра плагина
+// Getting a plugin instance
 XfeaturesRPGMoney plugin = (XfeaturesRPGMoney) Bukkit.getPluginManager().getPlugin("XfeaturesRPGMoney");
 
-// Работа с конфигурацией мобов
+// Working with mob configuration
 MobConfig mobConfig = plugin.mobConfig;
 List<Double> zombieReward = mobConfig.getReward("zombie");
 double min = zombieReward.get(0);
 double max = zombieReward.get(1);
 
-// Работа с API плагина
+// Working with the plugin API
 RPGMoneyAPI api = plugin.getAPI();
-// Получить случайное значение в диапазоне
+// Get a random value in the range
 double amount = api.getRandomInRange(10.0, 20.0);
-// Сбросить деньги в мире
+// Drop money in the world
 api.dropMoney(location, amount);
-// Проверить, был ли блок размещен игроком
+// Check if the block was placed by the player
 boolean isPlayerPlaced = api.isPlayerPlacedBlock(location);
 ```
 
-## 📊 Производительность
-### Плагин оптимизирован для минимального влияния на производительность сервера:
-- Асинхронное сохранение данных
-- Оптимизированные алгоритмы расчета наград
-- Минимальное использование памяти
+## 📊 Performance
+### The plugin is optimized for minimal impact on server performance:
+- Asynchronous data saving
+- Optimized reward calculation algorithms
+- Minimal memory usage
 
-## 📝 Планы на будущее
-- ✅ Более тонкие конфигурации **(Реализовано)**
-- Интеграция с PlaceholderAPI
-- Графический интерфейс для управления настройками
-- Добавление наград за Археологию, Исследования, Создание
+## 📝 Future plans
+- ✅ More refined configurations **(Implemented)**
+- ✅ Support for more languages **(Implemented)**
+- Integration with PlaceholderAPI
+- Graphical interface for managing settings
+- Adding rewards for Archaeology, Research, Creation
 
-## 🤝 Вклад в проект
-### Вклады приветствуются! Если у вас есть идеи по улучшению плагина:
-1. Создайте форк репозитория
-2. Создайте ветку для вашей функции (git checkout -b feature/amazing-feature)
-3. Зафиксируйте изменения (git commit -m 'Add some amazing feature')
-4. Отправьте изменения в ваш форк (git push origin feature/amazing-feature)
-5. Откройте Pull Request
+## 🤝 Contributing to the project
+### Contributions are welcome! If you have ideas for improving the plugin:
+1. Fork the repository
+2. Create a branch for your feature (git checkout -b feature/amazing-feature)
+3. Commit your changes (git commit -m ‘Add some amazing feature’)
+4. Push the changes to your fork (git push origin feature/amazing-feature)
+5. Open a Pull Request
 
-## 📞 Поддержка
-### Если у вас возникли проблемы или вопросы:
-- Создайте Issue в репозитории
-- Свяжитесь с нами через [Discord](https://discord.gg/KJU4DjGkeH)
+## 📊 Statistics
+### The plugin collects anonymous statistics via bStats to improve functionality:
+You can view the plugin statistics on the [bStats](https://bstats.org/plugin/bukkit/XfeaturesRPGMoney/26636) page.
 
+![bStats](https://img.shields.io/bstats/servers/26636?label=servers)
+![bStats](https://img.shields.io/bstats/players/26636?label=players)
 
+### Data collected:
+- Total amount of money in the economy
+- Number of players with money records
+- Use of messages in the action bar
+- Use of Fortune and Looting multipliers
+- Number of players and servers
+- Online mode status
+- Server, plugin, and Java versions
 
+### Disabling statistics
+If you want to disable statistics collection, you can do so in the `plugins/bStats/config.yml` file by setting `enabled: false`. Disabling statistics does not affect the functionality of the plugin.
+
+## 📞 Support
+### If you encounter any problems or have any questions:
+- Create an issue in the repository
+- Contact us via [Discord](https://discord.gg/KJU4DjGkeH)
+
+![Downloads](https://img.shields.io/github/downloads/XfeaturesGroup/XfeaturesRPGMoney/total?color=orange)
+![Issues](https://img.shields.io/github/issues/XfeaturesGroup/XfeaturesRPGMoney?color=red)
+![Last Commit](https://img.shields.io/github/last-commit/XfeaturesGroup/XfeaturesRPGMoney?color=blueviolet)
 
 <p align="center">
-  Сделано с ❤️ командой XfeaturesGroup
+  Made with ❤️ by the XfeaturesGroup team
 </p>

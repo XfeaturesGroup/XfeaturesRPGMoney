@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Messaggi di comando
+no-permission: "&cNon hai il permesso di usare questo comando."
+player-only: "&cQuesto comando è disponibile solo per i giocatori."
+config-reloaded: "&aConfigurazione ricaricata con successo."
+invalid-page-format: "&cFormato pagina non valido. Per favore usa un numero."
+no-data-for-page: "&cNon ci sono dati per questa pagina."
+
+# Messaggi statistiche
+stats-header: "&7===== &cLe tue statistiche &7====="
+stats-collected: "&eDenaro raccolto: &6%amount%"
+
+# Messaggi classifica giocatori
+top-header: "&7===== &cClassifica giocatori (Pagina %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% denaro"
+top-next-page: "&7Usa &c/rpgmoney top %page% &7per la pagina successiva"
+
+# Messaggi informazioni plugin
+info-header: "&7===== &cInformazioni plugin &7====="
+info-version: "&cVersione: &7%version%"
+info-author: "&cAutori: &7%authors%"
+info-fortune-header: "&cMoltiplicatori Fortuna:"
+info-fortune-entry: "&cLivello %level%: &7+%percent% denaro"
+info-looting-header: "&cMoltiplicatori Saccheggio:"
+info-looting-entry: "&cLivello %level%: &7+%percent% denaro"
+
+# Messaggi di aiuto
+help-header: "&7===== &cAiuto XfeaturesRPGMoney &7====="
+help-reload: "&c/rpgmoney reload &7- Ricarica configurazione"
+help-stats: "&c/rpgmoney stats &7- Mostra le tue statistiche"
+help-top: "&c/rpgmoney top [pagina] &7- Mostra classifica giocatori"
+help-info: "&c/rpgmoney info &7- Informazioni plugin"
+help-language: "&c/rpgmoney language <lingua> &7- Cambia la lingua del plugin"
+
+# Messaggi raccolta denaro
+currency-name: Denaro
+pickup: "&eHai raccolto %amount% denaro!"
+currency-pickup: "&eHai raccolto %amount% denaro!"
+money-item-name: "&e%amount% denaro"
+money-drop: "&eHai lasciato cadere %amount% denaro!"
+fishing-reward: "&eHai pescato %amount% denaro!"
+mining-reward: "&eHai estratto %amount% denaro!"
+entity-kill-reward: "&eHai ricevuto %amount% denaro per questa uccisione!"
+player-kill-reward: "&eHai ricevuto %amount% denaro per aver ucciso un giocatore!"
+player-death-drop: "&cHai perso %amount% denaro morendo!"
+currency-format: "%amount% denaro"
+currency-singular: denaro
+currency-plural: denaro
+
+# Messaggi lingua
+language-usage: "&cUtilizzo: /rpgmoney language <lingua>"
+language-not-found: "&cLingua %language% non trovata."
+language-changed: "&aLingua cambiata in %language%."

@@ -100,6 +100,14 @@ public class PlayerData {
                 .collect(Collectors.toList());
     }
 
+    public Collection<Double> getAllMoney() {
+        return Collections.unmodifiableCollection(collectedMoney.values());
+    }
+
+    public int getPlayerCount() {
+        return collectedMoney.size();
+    }
+
     public static class PlayerStats {
         private final String playerName;
         private final double money;

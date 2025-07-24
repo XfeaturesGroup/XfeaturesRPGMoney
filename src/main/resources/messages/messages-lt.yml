@@ -1,0 +1,55 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Komandų pranešimai
+no-permission: "&cJūs neturite teisės naudoti šios komandos."
+player-only: "&cŠi komanda prieinama tik žaidėjams."
+config-reloaded: "&aKonfigūracija sėkmingai perkrauta."
+invalid-page-format: "&cNeteisingas puslapio formatas. Prašome naudoti skaičių."
+no-data-for-page: "&cŠiame puslapyje nėra duomenų."
+
+# Statistikos pranešimai
+stats-header: "&7===== &cJūsų statistika &7====="
+stats-collected: "&eSurinkta pinigų: &6%amount%"
+
+# Žaidėjų reitingo pranešimai
+top-header: "&7===== &cŽaidėjų reitingas (Puslapis %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% pinigų"
+top-next-page: "&7Naudokite &c/rpgmoney top %page% &7kitam puslapiui"
+
+# Papildinio informacijos pranešimai
+info-header: "&7===== &cPapildinio informacija &7====="
+info-version: "&cVersija: &7%version%"
+info-author: "&cAutoriai: &7%authors%"
+info-fortune-header: "&cSėkmės koeficientai:"
+info-fortune-entry: "&cLygis %level%: &7+%percent% pinigų"
+info-looting-header: "&cGrobių koeficientai:"
+info-looting-entry: "&cLygis %level%: &7+%percent% pinigų"
+
+# Pagalbos pranešimai
+help-header: "&7===== &cXfeaturesRPGMoney Pagalba &7====="
+help-reload: "&c/rpgmoney reload &7- Perkrauti konfigūraciją"
+help-stats: "&c/rpgmoney stats &7- Rodyti savo statistiką"
+help-top: "&c/rpgmoney top [puslapis] &7- Rodyti žaidėjų reitingą"
+help-info: "&c/rpgmoney info &7- Papildinio informacija"
+help-language: "&c/rpgmoney language <kalba> &7- Pakeisti papildinio kalbą"
+
+# Pinigų surinkimo pranešimai
+currency-name: pinigų
+pickup: "&eJūs surinkote %amount% pinigų!"
+currency-pickup: "&eJūs surinkote %amount% pinigų!"
+money-item-name: "&e%amount% pinigų"
+money-drop: "&eJūs numetėte %amount% pinigų!"
+fishing-reward: "&eJūs pagavote %amount% pinigų!"
+mining-reward: "&eJūs iškasėte %amount% pinigų!"
+entity-kill-reward: "&eJūs gavote %amount% pinigų už nužudymą!"
+player-kill-reward: "&eJūs gavote %amount% pinigų už žaidėjo nužudymą!"
+player-death-drop: "&cJūs praradote %amount% pinigų mirties metu!"
+currency-format: "%amount% pinigų"
+currency-singular: pinigas
+currency-plural: pinigų
+currency-few: pinigai # Lietuvių gramatikai (2-4 pinigai)
+
+# Kalbos pranešimai
+language-usage: "&cNaudojimas: /rpgmoney language <kalba>"
+language-not-found: "&cKalba %language% nerasta."
+language-changed: "&aKalba pakeista į %language%."

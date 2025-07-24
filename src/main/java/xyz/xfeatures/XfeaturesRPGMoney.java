@@ -6,6 +6,9 @@ import org.bukkit.NamespacedKey;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
+import org.bstats.charts.SingleLineChart;
 import xyz.xfeatures.command.RPGMoneyCommand;
 import xyz.xfeatures.config.*;
 import xyz.xfeatures.data.PlayerData;
@@ -23,84 +26,130 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
     public PlayerData playerData;
     public ArcheologyConfig archeologyConfig;
 
+    private Metrics metrics;
+
     @Override
     public void onEnable() {
-        instance = this;
+        try {
+            int pluginId = 26636;
+            metrics = new Metrics(this, pluginId);
 
-        getLogger().info("Инициализация XfeaturesRPGMoney v" + getDescription().getVersion());
+            metrics.addCustomChart(new SingleLineChart("money_collected", () -> 100));
 
-        if (getServer().getPluginManager().getPlugin("Vault") == null) {
-            getLogger().severe("Vault не найден! Плагин отключается.");
-            getLogger().severe("Пожалуйста, установите Vault: https://www.spigotmc.org/resources/vault.34315/");
-            getServer().getPluginManager().disablePlugin(this);
-            return;
+            instance = this;
+
+            getLogger().info("Initialization XfeaturesRPGMoney v" + getDescription().getVersion());
+
+            if (getServer().getPluginManager().getPlugin("Vault") == null) {
+                getLogger().severe("Vault not found! Plugin disabled.");
+                getLogger().severe("Please install Vault: https://www.spigotmc.org/resources/vault.34315/");
+                getServer().getPluginManager().disablePlugin(this);
+                return;
+            }
+
+            if (!setupEconomy()) {
+                getLogger().severe("Unable to configure the economy! The plugin is being disabled.");
+                getLogger().severe("Make sure you have a compatible economy plugin installed (e.g., Essentials, CMI).");
+                getServer().getPluginManager().disablePlugin(this);
+                return;
+            }
+
+            saveDefaultConfig();
+            loadConfigs();
+
+            playerData = new PlayerData(this);
+
+            getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
+            getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
+            getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
+            getServer().getPluginManager().registerEvents(new SunflowerPickupListener(), this);
+            getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
+            getServer().getPluginManager().registerEvents(new ArcheologyListener(this), this);
+
+            getCommand("rpgmoney").setExecutor(new RPGMoneyCommand(this));
+
+            setupCustomCharts();
+
+            getLogger().info("bStats metrics enabled!");
+
+            getLogger().info("XfeaturesRPGMoney successfully loaded!");
+        } catch (Exception e) {
+            getLogger().warning("Error during initialization bStats: " + e.getMessage());
         }
-
-        if (!setupEconomy()) {
-            getLogger().severe("Не удалось настроить экономику! Плагин отключается.");
-            getLogger().severe("Убедитесь, что у вас установлен совместимый плагин экономики (например, Essentials, CMI)");
-            getServer().getPluginManager().disablePlugin(this);
-            return;
-        }
-
-        saveDefaultConfig();
-        loadConfigs();
-
-        playerData = new PlayerData(this);
-
-        getServer().getPluginManager().registerEvents(new EntityDeathListener(), this);
-        getServer().getPluginManager().registerEvents(new BlockBreakListener(), this);
-        getServer().getPluginManager().registerEvents(new PlayerFishListener(), this);
-        getServer().getPluginManager().registerEvents(new SunflowerPickupListener(), this);
-        getServer().getPluginManager().registerEvents(new BlockPlaceListener(), this);
-        getServer().getPluginManager().registerEvents(new ArcheologyListener(this), this);
-
-        getCommand("rpgmoney").setExecutor(new RPGMoneyCommand(this));
-    
-        getLogger().info("XfeaturesRPGMoney успешно загружен!");
     }
-    
+
+    private void setupCustomCharts() {
+        try {
+            metrics.addCustomChart(new SingleLineChart("total_money", () -> {
+                double totalMoney = 0;
+                for (double money : playerData.getAllMoney()) {
+                    totalMoney += money;
+                }
+                return (int) totalMoney;
+            }));
+
+            metrics.addCustomChart(new SimplePie("action_bar_messages", () ->
+                mainConfig.isShowActionBarMessages() ? "Включено" : "Выключено"));
+
+            metrics.addCustomChart(new SingleLineChart("players_with_money", () ->
+                playerData.getPlayerCount()));
+
+            metrics.addCustomChart(new SimplePie("fortune_multiplier_messages", () ->
+                mainConfig.isShowFortuneMultiplierMessages() ? "Включено" : "Выключено"));
+
+            metrics.addCustomChart(new SimplePie("looting_multiplier_messages", () ->
+                mainConfig.isShowLootingMultiplierMessages() ? "Включено" : "Выключено"));
+        } catch (Exception e) {
+            getLogger().warning("Error when setting up graphs bStats: " + e.getMessage());
+        }
+    }
+
     private void loadConfigs() {
+        mainConfig = new MainConfig(this);
+
+        messagesConfig = new MessagesConfig(this);
+
         mobConfig = new MobConfig(this);
         fishConfig = new FishConfig(this);
         blockConfig = new BlockConfig(this);
-        messagesConfig = new MessagesConfig(this);
-        mainConfig = new MainConfig(this);
         archeologyConfig = new ArcheologyConfig(this);
     }
-    
+
     public void reloadConfigs() {
         reloadConfig();
+
+        mainConfig.loadConfig();
+
+        messagesConfig.reloadConfig();
+
         mobConfig = new MobConfig(this);
         fishConfig = new FishConfig(this);
         blockConfig = new BlockConfig(this);
-        messagesConfig = new MessagesConfig(this);
-        mainConfig.loadConfig();
         archeologyConfig = new ArcheologyConfig(this);
     }
 
     private boolean setupEconomy() {
         if (getServer().getPluginManager().getPlugin("Vault") == null) {
-            getLogger().severe("Vault плагин не найден! Убедитесь, что Vault установлен и загружен.");
+            getLogger().severe("Vault plugin not found! Make sure Vault is installed and loaded.");
             return false;
         }
-        
+
         try {
             RegisteredServiceProvider<Economy> rsp = getServer().getServicesManager().getRegistration(Economy.class);
             if (rsp == null) {
-                getLogger().severe("Не удалось найти экономический провайдер Vault. Убедитесь, что установлен совместимый плагин экономики (например, Essentials, CMI).");
+                getLogger().severe("Unable to find the Vault economy provider. Make sure you have a compatible economy plugin installed (e.g., Essentials, CMI)");
                 return false;
             }
             economy = rsp.getProvider();
             if (economy != null) {
-                getLogger().info("Успешно подключен к экономике через Vault: " + economy.getName());
+                getLogger().info("Successfully connected to the economy through Vault: " + economy.getName());
                 return true;
             } else {
-                getLogger().severe("Не удалось получить провайдер экономики от Vault.");
+                getLogger().severe("Unable to obtain the economy provider from Vault");
                 return false;
             }
         } catch (Exception e) {
-            getLogger().severe("Произошла ошибка при настройке экономики: " + e.getMessage());
+            getLogger().severe("An error occurred while configuring the economy: " + e.getMessage());
             e.printStackTrace();
             return false;
         }

@@ -1,49 +1,49 @@
 prefix: "&c[XfeaturesRPGMoney]&r"
 
-# Сообщения команд
-no-permission: "&cУ вас нет прав на использование этой команды."
-player-only: "&cЭта команда доступна только для игроков."
-config-reloaded: "&aКонфигурация успешно перезагружена."
-invalid-page-format: "&cНеверный формат страницы. Используйте число."
-no-data-for-page: "&cНет данных для этой страницы."
+# Command messages
+no-permission: "&cYou do not have permission to use this command."
+player-only: "&cThis command is only available to players."
+config-reloaded: "&aConfiguration successfully reloaded."
+invalid-page-format: "&cInvalid page format. Use a number."
+no-data-for-page: "&cNo data for this page."
 
-# Сообщения статистики
-stats-header: "&7===== &cВаша статистика &7====="
-stats-collected: "&eСобрано монет: &6%amount%"
+# Statistics messages
+stats-header: "&7===== &cYour statistics &7====="
+stats-collected: "&eCoins collected: &6%amount%"
 
-# Сообщения топа игроков
-top-header: "&7===== &cТоп игроков (Страница %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% монет"
-top-next-page: "&7Используйте &c/rpgmoney top %page% &7для следующей страницы"
+# Top player messages
+top-header: "&7===== &cTop players (Page %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% coins"
+top-next-page: "&7Use &c/rpgmoney top %page% &7for the next page"
 
-# Сообщения информации о плагине
-info-header: "&7===== &cИнформация о плагине &7====="
-info-version: "&cВерсия: &7%version%"
-info-author: "&cАвторы: &7%authors%"
-info-fortune-header: "&cМножители удачи:"
-info-fortune-entry: "&cУровень %level%: &7+%percent%% монет"
-info-looting-header: "&cМножители добычи:"
-info-looting-entry: "&cУровень %level%: &7+%percent%% монет"
+# Plugin information messages
+info-header: "&7===== &cPlugin information &7====="
+info-version: "&cVersion: &7%version%"
+info-author: "&cAuthors: &7%authors%"
+info-fortune-header: "&cLuck multipliers:"
+info-fortune-entry: "&cLevel %level%: &7+%percent% coins"
+info-looting-header: "&cLoot multipliers:"
+info-looting-entry: "&cLevel %level%: &7+%percent% coins"
 
-# Сообщения помощи
-help-header: "&7===== &cXfeaturesRPGMoney Помощь &7====="
-help-reload: "&c/rpgmoney reload &7- Перезагрузить конфигурацию"
-help-stats: "&c/rpgmoney stats &7- Показать вашу статистику"
-help-top: "&c/rpgmoney top [страница] &7- Показать топ игроков"
-help-info: "&c/rpgmoney info &7- Информация о плагине"
+# Help messages
+help-header: "&7===== &cXfeaturesRPGMoney Help &7====="
+help-reload: "&c/rpgmoney reload &7- Reload configuration"
+help-stats: "&c/rpgmoney stats &7- Show your statistics"
+help-top: "&c/rpgmoney top [page] &7- Show top players"
+help-info: "&c/rpgmoney info &7- Plugin information"
 
-# Сообщения о добыче монет
-currency-name: "монет"
-pickup: "&eВы подняли %amount% монет!"
-currency-pickup: "&eВы подняли %amount% монет!"
-money-item-name: "&e%amount% монет"
-money-drop: "&eВы выбили %amount% монет!"
-fishing-reward: "&eВы выловили %amount% монет!"
-mining-reward: "&eВы добыли %amount% монет!"
-entity-kill-reward: "&eВы получили %amount% монет за убийство!"
-player-kill-reward: "&eВы получили %amount% монет за убийство игрока!"
-player-death-loss: "&cВы потеряли %amount% монет при смерти!"
-currency-format: "%amount% монет"
-currency-singular: "монета"
-currency-plural: "монет"
-currency-few: "монеты"  # Для русской грамматики (2-4 монеты)
+# Coin pickup messages
+currency-name: "coins"
+pickup: "&eYou picked up %amount% coins!"
+currency-pickup: "&eYou picked up %amount% coins!"
+money-item-name: "&e%amount% coins"
+money-drop: "&eYou knocked out %amount% coins!"
+fishing-reward: "&eYou caught %amount% coins!"
+mining-reward: "&eYou mined %amount% coins!"
+entity-kill-reward: "&eYou received %amount% coins for killing!"
+player-kill-reward: "&eYou received %amount% coins for killing a player!"
+player-death-loss: "&cYou lost %amount% coins when you died!"
+currency-format: "%amount% coins"
+currency-singular: "coin"
+currency-plural: "coins"
+currency-few: "coins"  # For Russian grammar (2-4 coins)

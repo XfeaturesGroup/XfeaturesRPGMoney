@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# कमांड संदेश
+no-permission: "&cआपके पास इस कमांड का उपयोग करने की अनुमति नहीं है।"
+player-only: "&cयह कमांड केवल खिलाड़ियों के लिए उपलब्ध है।"
+config-reloaded: "&aकॉन्फ़िगरेशन सफलतापूर्वक रीलोड किया गया।"
+invalid-page-format: "&cअमान्य पेज फॉर्मेट। कृपया एक संख्या का उपयोग करें।"
+no-data-for-page: "&cइस पेज के लिए कोई डेटा नहीं है।"
+
+# आंकड़े संदेश
+stats-header: "&7===== &cआपके आंकड़े &7====="
+stats-collected: "&eएकत्रित पैसा: &6%amount%"
+
+# शीर्ष खिलाड़ी संदेश
+top-header: "&7===== &cखिलाड़ी रैंकिंग (पेज %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% पैसा"
+top-next-page: "&7अगले पेज के लिए &c/rpgmoney top %page% &7का उपयोग करें"
+
+# प्लगइन जानकारी संदेश
+info-header: "&7===== &cप्लगइन जानकारी &7====="
+info-version: "&cवर्शन: &7%version%"
+info-author: "&cलेखक: &7%authors%"
+info-fortune-header: "&cफॉर्च्यून गुणक:"
+info-fortune-entry: "&cस्तर %level%: &7+%percent% पैसा"
+info-looting-header: "&cलूटिंग गुणक:"
+info-looting-entry: "&cस्तर %level%: &7+%percent% पैसा"
+
+# मदद संदेश
+help-header: "&7===== &cXfeaturesRPGMoney मदद &7====="
+help-reload: "&c/rpgmoney reload &7- कॉन्फ़िगरेशन रीलोड करें"
+help-stats: "&c/rpgmoney stats &7- अपने आंकड़े देखें"
+help-top: "&c/rpgmoney top [पेज] &7- खिलाड़ी रैंकिंग देखें"
+help-info: "&c/rpgmoney info &7- प्लगइन जानकारी"
+help-language: "&c/rpgmoney language <भाषा> &7- प्लगइन भाषा बदलें"
+
+# पैसा संग्रह संदेश
+currency-name: पैसा
+pickup: "&eआपने %amount% पैसा उठाया!"
+currency-pickup: "&eआपने %amount% पैसा उठाया!"
+money-item-name: "&e%amount% पैसा"
+money-drop: "&eआपने %amount% पैसा गिराया!"
+fishing-reward: "&eआपने %amount% पैसा मछली पकड़ा!"
+mining-reward: "&eआपने %amount% पैसा खनन किया!"
+entity-kill-reward: "&eआपको इस किल के लिए %amount% पैसा मिला!"
+player-kill-reward: "&eआपको एक खिलाड़ी को मारने के लिए %amount% पैसा मिला!"
+player-death-drop: "&cमरने से आपने %amount% पैसा खो दिया!"
+currency-format: "%amount% पैसा"
+currency-singular: पैसा
+currency-plural: पैसे
+
+# भाषा संदेश
+language-usage: "&cउपयोग: /rpgmoney language <भाषा>"
+language-not-found: "&cभाषा %language% नहीं मिली।"
+language-changed: "&aभाषा %language% में बदल गई।"

@@ -19,6 +19,7 @@ public class MainConfig {
     private boolean combineNearbyDrops;
     private double combineRadius;
     private double spawnerMultiplier;
+    private String language;
 
     public MainConfig(Plugin plugin) {
         this.plugin = plugin;
@@ -84,6 +85,10 @@ public class MainConfig {
             config.set("spawner-multiplier", 0.6);
         }
         
+        if (!config.contains("language")) {
+            config.set("language", "en");
+        }
+        
         plugin.saveConfig();
 
         dropChance = config.getDouble("drop-chance");
@@ -116,6 +121,8 @@ public class MainConfig {
                 plugin.getLogger().warning("Неверный формат уровня добычи в конфигурации: " + key);
             }
         }
+
+        language = config.getString("language", "en");
     }
 
     public double getDropChance() {
@@ -160,5 +167,9 @@ public class MainConfig {
     
     public double getSpawnerMultiplier() {
         return plugin.getConfig().getDouble("spawner-multiplier", 0.6);
+    }
+    
+    public String getLanguage() {
+        return language;
     }
 }

@@ -9,6 +9,7 @@ import xyz.xfeatures.XfeaturesRPGMoney;
 import xyz.xfeatures.data.PlayerData.PlayerStats;
 import xyz.xfeatures.util.CurrencyFormatter;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -95,6 +96,32 @@ public class RPGMoneyCommand implements CommandExecutor, TabCompleter {
                 }
                 return true;
                 
+            case "language":
+                if (!sender.hasPermission("xfeatures.rpgmoney.language")) {
+                    sender.sendMessage(plugin.messagesConfig.format("no-permission"));
+                    return true;
+                }
+                
+                if (args.length < 2) {
+                    sender.sendMessage(plugin.messagesConfig.format("language-usage"));
+                    return true;
+                }
+                
+                String newLanguage = args[1].toLowerCase();
+                File langFile = new File(plugin.getDataFolder(), "messages/messages-" + newLanguage + ".yml");
+                
+                if (!langFile.exists()) {
+                    sender.sendMessage(plugin.messagesConfig.format("language-not-found", "language", newLanguage));
+                    return true;
+                }
+                
+                plugin.getConfig().set("language", newLanguage);
+                plugin.saveConfig();
+                plugin.reloadConfigs();
+                
+                sender.sendMessage(plugin.messagesConfig.format("language-changed", "language", newLanguage));
+                return true;
+                
             default:
                 sendHelp(sender);
                 return true;
@@ -107,6 +134,10 @@ public class RPGMoneyCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage(plugin.messagesConfig.format("help-stats"));
         sender.sendMessage(plugin.messagesConfig.format("help-top"));
         sender.sendMessage(plugin.messagesConfig.format("help-info"));
+        
+        if (sender.hasPermission("xfeatures.rpgmoney.language")) {
+            sender.sendMessage(plugin.messagesConfig.format("help-language"));
+        }
     }
     
     private void showTopPlayers(CommandSender sender, int page) {
@@ -147,6 +178,10 @@ public class RPGMoneyCommand implements CommandExecutor, TabCompleter {
             }
             
             completions.add("info");
+            
+            if (sender.hasPermission("xfeatures.rpgmoney.language")) {
+                completions.add("language");
+            }
             
             return completions.stream()
                     .filter(s -> s.startsWith(args[0].toLowerCase()))

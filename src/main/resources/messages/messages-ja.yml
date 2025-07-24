@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# コマンドメッセージ
+no-permission: "&cこのコマンドを使用する権限がありません。"
+player-only: "&cこのコマンドはプレイヤーのみ使用できます。"
+config-reloaded: "&a設定が正常に再読み込みされました。"
+invalid-page-format: "&c無効なページ形式です。数字を使用してください。"
+no-data-for-page: "&cこのページにはデータがありません。"
+
+# 統計メッセージ
+stats-header: "&7===== &cあなたの統計 &7====="
+stats-collected: "&e集めたお金: &6%amount%"
+
+# プレイヤーランキングメッセージ
+top-header: "&7===== &cプレイヤーランキング（ページ %page%） &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% お金"
+top-next-page: "&7次のページを見るには &c/rpgmoney top %page% &7を使用してください"
+
+# プラグイン情報メッセージ
+info-header: "&7===== &cプラグイン情報 &7====="
+info-version: "&cバージョン: &7%version%"
+info-author: "&c作者: &7%authors%"
+info-fortune-header: "&c幸運の倍率:"
+info-fortune-entry: "&cレベル %level%: &7+%percent% お金"
+info-looting-header: "&c略奪の倍率:"
+info-looting-entry: "&cレベル %level%: &7+%percent% お金"
+
+# ヘルプメッセージ
+help-header: "&7===== &cXfeaturesRPGMoney ヘルプ &7====="
+help-reload: "&c/rpgmoney reload &7- 設定を再読み込み"
+help-stats: "&c/rpgmoney stats &7- あなたの統計を表示"
+help-top: "&c/rpgmoney top [ページ] &7- プレイヤーランキングを表示"
+help-info: "&c/rpgmoney info &7- プラグイン情報"
+help-language: "&c/rpgmoney language <言語> &7- プラグインの言語を変更"
+
+# お金収集メッセージ
+currency-name: お金
+pickup: "&e%amount% お金を拾いました！"
+currency-pickup: "&e%amount% お金を拾いました！"
+money-item-name: "&e%amount% お金"
+money-drop: "&e%amount% お金を落としました！"
+fishing-reward: "&e%amount% お金を釣りました！"
+mining-reward: "&e%amount% お金を採掘しました！"
+entity-kill-reward: "&eこの討伐で %amount% お金を獲得しました！"
+player-kill-reward: "&eプレイヤーを倒して %amount% お金を獲得しました！"
+player-death-drop: "&c死亡により %amount% お金を失いました！"
+currency-format: "%amount% お金"
+currency-singular: お金
+currency-plural: お金
+
+# 言語メッセージ
+language-usage: "&c使用法: /rpgmoney language <言語>"
+language-not-found: "&c言語 %language% が見つかりません。"
+language-changed: "&a言語が %language% に変更されました。"
