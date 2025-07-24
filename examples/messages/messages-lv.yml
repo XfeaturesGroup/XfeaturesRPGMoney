@@ -47,3 +47,8 @@ currency-format: "%amount% monētu"
 currency-singular: monēta
 currency-plural: monētas
 currency-few: monētas # Krievu gramatikai (2-4 monētas)
+
+# Valodas ziņojumi
+language-usage: "&cLietošana: /rpgmoney language <valoda>"
+language-not-found: "&cValoda %language% nav atrasta."
+language-changed: "&aValoda nomainīta uz %language%."

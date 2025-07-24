@@ -31,6 +31,7 @@ help-reload: "&c/rpgmoney reload &7- Perkrauti konfigūraciją"
 help-stats: "&c/rpgmoney stats &7- Rodyti savo statistiką"
 help-top: "&c/rpgmoney top [puslapis] &7- Rodyti žaidėjų reitingą"
 help-info: "&c/rpgmoney info &7- Papildinio informacija"
+help-language: "&c/rpgmoney language <kalba> &7- Pakeisti papildinio kalbą"
 
 # Pinigų surinkimo pranešimai
 currency-name: pinigų
@@ -47,3 +48,8 @@ currency-format: "%amount% pinigų"
 currency-singular: pinigas
 currency-plural: pinigų
 currency-few: pinigai # Lietuvių gramatikai (2-4 pinigai)
+
+# Kalbos pranešimai
+language-usage: "&cNaudojimas: /rpgmoney language <kalba>"
+language-not-found: "&cKalba %language% nerasta."
+language-changed: "&aKalba pakeista į %language%."

@@ -47,3 +47,8 @@ currency-format: "%amount% монет"
 currency-singular: монета
 currency-plural: монет
 currency-few: монеты # Для русской грамматики (2-4 монеты)
+
+# Сообщения языка
+language-usage: "&cИспользование: /rpgmoney language <язык>"
+language-not-found: "&cЯзык %language% не найден."
+language-changed: "&aЯзык изменен на %language%."

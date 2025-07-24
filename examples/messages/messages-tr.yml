@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Komut mesajları
+no-permission: "&cBu komutu kullanma izniniz yok."
+player-only: "&cBu komut sadece oyuncular için kullanılabilir."
+config-reloaded: "&aYapılandırma başarıyla yeniden yüklendi."
+invalid-page-format: "&cGeçersiz sayfa formatı. Lütfen bir sayı kullanın."
+no-data-for-page: "&cBu sayfa için veri yok."
+
+# İstatistik mesajları
+stats-header: "&7===== &cİstatistikleriniz &7====="
+stats-collected: "&eToplanan para: &6%amount%"
+
+# Oyuncu sıralaması mesajları
+top-header: "&7===== &cOyuncu Sıralaması (Sayfa %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% para"
+top-next-page: "&7Sonraki sayfa için &c/rpgmoney top %page% &7kullanın"
+
+# Eklenti bilgi mesajları
+info-header: "&7===== &cEklenti Bilgisi &7====="
+info-version: "&cSürüm: &7%version%"
+info-author: "&cYazarlar: &7%authors%"
+info-fortune-header: "&cŞans Çarpanları:"
+info-fortune-entry: "&cSeviye %level%: &7+%percent% para"
+info-looting-header: "&cGanimet Çarpanları:"
+info-looting-entry: "&cSeviye %level%: &7+%percent% para"
+
+# Yardım mesajları
+help-header: "&7===== &cXfeaturesRPGMoney Yardım &7====="
+help-reload: "&c/rpgmoney reload &7- Yapılandırmayı yeniden yükle"
+help-stats: "&c/rpgmoney stats &7- İstatistiklerinizi görüntüleyin"
+help-top: "&c/rpgmoney top [sayfa] &7- Oyuncu sıralamasını görüntüleyin"
+help-info: "&c/rpgmoney info &7- Eklenti bilgisi"
+help-language: "&c/rpgmoney language <dil> &7- Eklenti dilini değiştir"
+
+# Para toplama mesajları
+currency-name: Para
+pickup: "&e%amount% para topladınız!"
+currency-pickup: "&e%amount% para topladınız!"
+money-item-name: "&e%amount% para"
+money-drop: "&e%amount% para düşürdünüz!"
+fishing-reward: "&e%amount% para yakaladınız!"
+mining-reward: "&e%amount% para kazdınız!"
+entity-kill-reward: "&eBu öldürme için %amount% para kazandınız!"
+player-kill-reward: "&eBir oyuncuyu öldürdüğünüz için %amount% para kazandınız!"
+player-death-drop: "&cÖlürken %amount% para kaybettiniz!"
+currency-format: "%amount% para"
+currency-singular: para
+currency-plural: para
+
+# Dil mesajları
+language-usage: "&cKullanım: /rpgmoney language <dil>"
+language-not-found: "&c%language% dili bulunamadı."
+language-changed: "&aDil %language% olarak değiştirildi."

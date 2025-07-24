@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# 명령어 메시지
+no-permission: "&c이 명령어를 사용할 권한이 없습니다."
+player-only: "&c이 명령어는 플레이어만 사용할 수 있습니다."
+config-reloaded: "&a설정이 성공적으로 다시 로드되었습니다."
+invalid-page-format: "&c잘못된 페이지 형식입니다. 숫자를 사용해주세요."
+no-data-for-page: "&c이 페이지에 데이터가 없습니다."
+
+# 통계 메시지
+stats-header: "&7===== &c당신의 통계 &7====="
+stats-collected: "&e수집한 돈: &6%amount%"
+
+# 플레이어 랭킹 메시지
+top-header: "&7===== &c플레이어 랭킹 (페이지 %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% 돈"
+top-next-page: "&7다음 페이지를 보려면 &c/rpgmoney top %page% &7를 사용하세요"
+
+# 플러그인 정보 메시지
+info-header: "&7===== &c플러그인 정보 &7====="
+info-version: "&c버전: &7%version%"
+info-author: "&c제작자: &7%authors%"
+info-fortune-header: "&c행운 배율:"
+info-fortune-entry: "&c레벨 %level%: &7+%percent% 돈"
+info-looting-header: "&c약탈 배율:"
+info-looting-entry: "&c레벨 %level%: &7+%percent% 돈"
+
+# 도움말 메시지
+help-header: "&7===== &cXfeaturesRPGMoney 도움말 &7====="
+help-reload: "&c/rpgmoney reload &7- 설정 다시 로드"
+help-stats: "&c/rpgmoney stats &7- 통계 보기"
+help-top: "&c/rpgmoney top [페이지] &7- 플레이어 랭킹 보기"
+help-info: "&c/rpgmoney info &7- 플러그인 정보"
+help-language: "&c/rpgmoney language <언어> &7- 플러그인 언어 변경"
+
+# 돈 수집 메시지
+currency-name: 돈
+pickup: "&e%amount% 돈을 주웠습니다!"
+currency-pickup: "&e%amount% 돈을 주웠습니다!"
+money-item-name: "&e%amount% 돈"
+money-drop: "&e%amount% 돈을 떨어뜨렸습니다!"
+fishing-reward: "&e%amount% 돈을 낚았습니다!"
+mining-reward: "&e%amount% 돈을 채굴했습니다!"
+entity-kill-reward: "&e이 처치로 %amount% 돈을 받았습니다!"
+player-kill-reward: "&e플레이어 처치로 %amount% 돈을 받았습니다!"
+player-death-drop: "&c사망으로 %amount% 돈을 잃었습니다!"
+currency-format: "%amount% 돈"
+currency-singular: 돈
+currency-plural: 돈
+
+# 언어 메시지
+language-usage: "&c사용법: /rpgmoney language <언어>"
+language-not-found: "&c언어 %language%를 찾을 수 없습니다."
+language-changed: "&a언어가 %language%로 변경되었습니다."

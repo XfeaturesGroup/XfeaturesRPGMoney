@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# Käskude sõnumid
+no-permission: "&cSul pole luba seda käsku kasutada."
+player-only: "&cSee käsk on saadaval ainult mängijatele."
+config-reloaded: "&aSeadistus on edukalt uuesti laaditud."
+invalid-page-format: "&cVale lehekülje formaat. Palun kasuta numbrit."
+no-data-for-page: "&cSellel leheküljel pole andmeid."
+
+# Statistika sõnumid
+stats-header: "&7===== &cSinu statistika &7====="
+stats-collected: "&eKogutud raha: &6%amount%"
+
+# Mängijate edetabeli sõnumid
+top-header: "&7===== &cMängijate edetabel (Lehekülg %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% raha"
+top-next-page: "&7Kasuta &c/rpgmoney top %page% &7järgmise lehekülje jaoks"
+
+# Plugina info sõnumid
+info-header: "&7===== &cPlugina informatsioon &7====="
+info-version: "&cVersioon: &7%version%"
+info-author: "&cAutorid: &7%authors%"
+info-fortune-header: "&cÕnne kordajad:"
+info-fortune-entry: "&cTase %level%: &7+%percent% raha"
+info-looting-header: "&cRöövimise kordajad:"
+info-looting-entry: "&cTase %level%: &7+%percent% raha"
+
+# Abi sõnumid
+help-header: "&7===== &cXfeaturesRPGMoney Abi &7====="
+help-reload: "&c/rpgmoney reload &7- Laadi seadistus uuesti"
+help-stats: "&c/rpgmoney stats &7- Kuva oma statistikat"
+help-top: "&c/rpgmoney top [lehekülg] &7- Kuva mängijate edetabelit"
+help-info: "&c/rpgmoney info &7- Plugina informatsioon"
+help-language: "&c/rpgmoney language <keel> &7- Muuda plugina keelt"
+
+# Raha kogumise sõnumid
+currency-name: Raha
+pickup: "&eKogusid %amount% raha!"
+currency-pickup: "&eKogusid %amount% raha!"
+money-item-name: "&e%amount% raha"
+money-drop: "&eViskasid maha %amount% raha!"
+fishing-reward: "&ePüüdsid %amount% raha!"
+mining-reward: "&eKaevandad %amount% raha!"
+entity-kill-reward: "&eSaid %amount% raha selle tapmise eest!"
+player-kill-reward: "&eSaid %amount% raha mängija tapmise eest!"
+player-death-drop: "&cKaotasid surres %amount% raha!"
+currency-format: "%amount% raha"
+currency-singular: raha
+currency-plural: raha
+
+# Keele sõnumid
+language-usage: "&cKasutus: /rpgmoney language <keel>"
+language-not-found: "&cKeelt %language% ei leitud."
+language-changed: "&aKeel muudetud %language%."

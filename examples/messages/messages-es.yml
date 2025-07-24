@@ -4,8 +4,8 @@ prefijo: "&c[XfeaturesRPGMoney]&r"
 sin permiso: "&cNo tienes permiso para usar este comando."
 solo para jugadores: "&cEste comando solo está disponible para los jugadores."
 configuración recargada: "&aLa configuración se ha recargado correctamente."
-invalid-page-format: "&cFormato de página incorrecto. Utilice un número".
-no-data-for-page: "&cNo hay datos para esta página".
+invalid-page-format: "&cFormato de página incorrecto. Utilice un número"
+no-data-for-page: "&cNo hay datos para esta página"
 
 # Mensajes de estadísticas
 stats-header: "&7===== &cSus estadísticas &7====="
@@ -31,6 +31,7 @@ help-reload: "&c/rpgmoney reload &7- Recargar la configuración"
 help-stats: "&c/rpgmoney stats &7- Mostrar tus estadísticas"
 help-top: "&c/rpgmoney top [página] &7- Mostrar los mejores jugadores"
 help-info: "&c/rpgmoney info &7- Información sobre el complemento"
+help-language: "&c/rpgmoney language <idioma> &7- Cambiar el idioma del plugin"
 
 # Mensajes sobre la obtención de monedas
 currency-name: monedas
@@ -47,3 +48,8 @@ currency-format: "%amount% monedas"
 currency-singular: moneda
 currency-plural: monedas
 currency-few: monedas # Para la gramática rusa (2-4 monedas)
+
+# Mensajes de idioma
+language-usage: "&cUso: /rpgmoney language <idioma>"
+language-not-found: "&cIdioma %language% no encontrado."
+language-changed: "&aIdioma cambiado a %language%"

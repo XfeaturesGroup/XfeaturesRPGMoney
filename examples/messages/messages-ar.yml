@@ -1,0 +1,54 @@
+prefix: "&c[XfeaturesRPGMoney]&r"
+
+# رسائل الأوامر
+no-permission: "&cليس لديك إذن لاستخدام هذا الأمر."
+player-only: "&cهذا الأمر متاح فقط للاعبين."
+config-reloaded: "&aتم إعادة تحميل الإعدادات بنجاح."
+invalid-page-format: "&cتنسيق صفحة غير صالح. يرجى استخدام رقم."
+no-data-for-page: "&cلا توجد بيانات لهذه الصفحة."
+
+# رسائل الإحصائيات
+stats-header: "&7===== &cإحصائياتك &7====="
+stats-collected: "&eالمال المجمع: &6%amount%"
+
+# رسائل تصنيف اللاعبين
+top-header: "&7===== &cتصنيف اللاعبين (الصفحة %page%) &7====="
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount% مال"
+top-next-page: "&7استخدم &c/rpgmoney top %page% &7للصفحة التالية"
+
+# رسائل معلومات البرنامج المساعد
+info-header: "&7===== &cمعلومات البرنامج المساعد &7====="
+info-version: "&cالإصدار: &7%version%"
+info-author: "&cالمؤلفون: &7%authors%"
+info-fortune-header: "&cمضاعفات الحظ:"
+info-fortune-entry: "&cالمستوى %level%: &7+%percent% مال"
+info-looting-header: "&cمضاعفات النهب:"
+info-looting-entry: "&cالمستوى %level%: &7+%percent% مال"
+
+# رسائل المساعدة
+help-header: "&7===== &cمساعدة XfeaturesRPGMoney &7====="
+help-reload: "&c/rpgmoney reload &7- إعادة تحميل الإعدادات"
+help-stats: "&c/rpgmoney stats &7- عرض إحصائياتك"
+help-top: "&c/rpgmoney top [الصفحة] &7- عرض تصنيف اللاعبين"
+help-info: "&c/rpgmoney info &7- معلومات البرنامج المساعد"
+help-language: "&c/rpgmoney language <اللغة> &7- تغيير لغة البرنامج المساعد"
+
+# رسائل جمع المال
+currency-name: مال
+pickup: "&eلقد التقطت %amount% من المال!"
+currency-pickup: "&eلقد التقطت %amount% من المال!"
+money-item-name: "&e%amount% مال"
+money-drop: "&eلقد أسقطت %amount% من المال!"
+fishing-reward: "&eلقد اصطدت %amount% من المال!"
+mining-reward: "&eلقد استخرجت %amount% من المال!"
+entity-kill-reward: "&eلقد حصلت على %amount% من المال مقابل هذا القتل!"
+player-kill-reward: "&eلقد حصلت على %amount% من المال مقابل قتل لاعب!"
+player-death-drop: "&cلقد فقدت %amount% من المال بسبب الموت!"
+currency-format: "%amount% مال"
+currency-singular: مال
+currency-plural: أموال
+
+# رسائل اللغة
+language-usage: "&cالاستخدام: /rpgmoney language <اللغة>"
+language-not-found: "&cاللغة %language% غير موجودة."
+language-changed: "&aتم تغيير اللغة إلى %language%"
