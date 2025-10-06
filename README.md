@@ -331,7 +331,7 @@ stats-collected: "&eMoney collected: &6%amount%"
 
 # Top players messages
 top-header: "&7===== &cPlayer Rankings (Page %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% money"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Use &c/rpgmoney top %page% &7for the next page"
 
 # Plugin info messages
@@ -353,18 +353,19 @@ help-language: "&c/rpgmoney language <language> &7- Change plugin language"
 
 # Money collection messages
 currency-name: Money
-pickup: "&eYou picked up %amount% money!"
-currency-pickup: "&eYou picked up %amount% money!"
-money-item-name: "&e%amount% money"
-money-drop: "&eYou dropped %amount% money!"
-fishing-reward: "&eYou fished %amount% money!"
-mining-reward: "&eYou mined %amount% money!"
-entity-kill-reward: "&eYou received %amount% money for this kill!"
-player-kill-reward: "&eYou received %amount% money for killing a player!"
-player-death-drop: "&cYou lost %amount% money by dying!"
+pickup: "&eYou picked up %amount%!"
+currency-pickup: "&eYou picked up %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&eYou dropped %amount%!"
+fishing-reward: "&eYou fished %amount%!"
+mining-reward: "&eYou mined %amount%!"
+entity-kill-reward: "&eYou received %amount% for this kill!"
+player-kill-reward: "&eYou received %amount% for killing a player!"
+player-death-drop: "&cYou lost %amount% by dying!"
 currency-format: "%amount%"
 currency-singular: money
 currency-plural: money
+currency-few: money
 
 # Language messages
 language-usage: "&cUsage: /rpgmoney language <language>"
