@@ -1,5 +1,5 @@
 name: XfeaturesRPGMoney
-version: 1.1.1-SNAPSHOT
+version: 1.1.2-SNAPSHOT
 main: xyz.xfeatures.XfeaturesRPGMoney
 api-version: 1.13
 prefix: XFEATURES
@@ -24,7 +24,7 @@ permissions:
     default: op
   xfeatures.rpgmoney.top:
     description: Allows viewing the top players
-    default: true
+    default: op
   xfeatures.rpgmoney.language:
     description: Allows changing the plugin language
     default: op

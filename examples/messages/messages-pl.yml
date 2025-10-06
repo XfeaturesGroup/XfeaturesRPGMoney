@@ -13,7 +13,7 @@ stats-collected: "&eZebrane pieniądze: &6%amount%"
 
 # Wiadomości rankingu graczy
 top-header: "&7===== &cRanking graczy (Strona %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% pieniędzy"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Użyj &c/rpgmoney top %page% &7dla następnej strony"
 
 # Wiadomości informacji o pluginie
@@ -21,9 +21,9 @@ info-header: "&7===== &cInformacje o pluginie &7====="
 info-version: "&cWersja: &7%version%"
 info-author: "&cAutorzy: &7%authors%"
 info-fortune-header: "&cMnożniki Fortuny:"
-info-fortune-entry: "&cPoziom %level%: &7+%percent% pieniędzy"
+info-fortune-entry: "&cPoziom %level%: &7+%percent%% pieniędzy"
 info-looting-header: "&cMnożniki Grabieży:"
-info-looting-entry: "&cPoziom %level%: &7+%percent% pieniędzy"
+info-looting-entry: "&cPoziom %level%: &7+%percent%% pieniędzy"
 
 # Wiadomości pomocy
 help-header: "&7===== &cPomoc XfeaturesRPGMoney &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <język> &7- Zmień język pluginu"
 
 # Wiadomości zbierania pieniędzy
 currency-name: Pieniądze
-pickup: "&ePodniosłeś %amount% pieniędzy!"
-currency-pickup: "&ePodniosłeś %amount% pieniędzy!"
-money-item-name: "&e%amount% pieniędzy"
-money-drop: "&eUpuściłeś %amount% pieniędzy!"
-fishing-reward: "&eWyłowiłeś %amount% pieniędzy!"
-mining-reward: "&eWykopałeś %amount% pieniędzy!"
-entity-kill-reward: "&eOtrzymałeś %amount% pieniędzy za to zabójstwo!"
-player-kill-reward: "&eOtrzymałeś %amount% pieniędzy za zabicie gracza!"
-player-death-drop: "&cStraciłeś %amount% pieniędzy umierając!"
-currency-format: "%amount% pieniędzy"
+pickup: "&ePodniosłeś %amount%!"
+currency-pickup: "&ePodniosłeś %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&eUpuściłeś %amount%!"
+fishing-reward: "&eWyłowiłeś %amount%!"
+mining-reward: "&eWykopałeś %amount%!"
+entity-kill-reward: "&eOtrzymałeś %amount% za to zabójstwo!"
+player-kill-reward: "&eOtrzymałeś %amount% za zabicie gracza!"
+player-death-drop: "&cStraciłeś %amount% umierając!"
+currency-format: "%amount%"
 currency-singular: pieniądz
 currency-plural: pieniędzy
+currency-few: pieniądze
 
 # Wiadomości języka
 language-usage: "&cUżycie: /rpgmoney language <język>"

@@ -13,7 +13,7 @@ stats-collected: "&eKogutud raha: &6%amount%"
 
 # Mängijate edetabeli sõnumid
 top-header: "&7===== &cMängijate edetabel (Lehekülg %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% raha"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Kasuta &c/rpgmoney top %page% &7järgmise lehekülje jaoks"
 
 # Plugina info sõnumid
@@ -21,9 +21,9 @@ info-header: "&7===== &cPlugina informatsioon &7====="
 info-version: "&cVersioon: &7%version%"
 info-author: "&cAutorid: &7%authors%"
 info-fortune-header: "&cÕnne kordajad:"
-info-fortune-entry: "&cTase %level%: &7+%percent% raha"
+info-fortune-entry: "&cTase %level%: &7+%percent%% raha"
 info-looting-header: "&cRöövimise kordajad:"
-info-looting-entry: "&cTase %level%: &7+%percent% raha"
+info-looting-entry: "&cTase %level%: &7+%percent%% raha"
 
 # Abi sõnumid
 help-header: "&7===== &cXfeaturesRPGMoney Abi &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <keel> &7- Muuda plugina keelt"
 
 # Raha kogumise sõnumid
 currency-name: Raha
-pickup: "&eKogusid %amount% raha!"
-currency-pickup: "&eKogusid %amount% raha!"
-money-item-name: "&e%amount% raha"
-money-drop: "&eViskasid maha %amount% raha!"
-fishing-reward: "&ePüüdsid %amount% raha!"
-mining-reward: "&eKaevandad %amount% raha!"
-entity-kill-reward: "&eSaid %amount% raha selle tapmise eest!"
-player-kill-reward: "&eSaid %amount% raha mängija tapmise eest!"
-player-death-drop: "&cKaotasid surres %amount% raha!"
-currency-format: "%amount% raha"
+pickup: "&eKogusid %amount%!"
+currency-pickup: "&eKogusid %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&eViskasid maha %amount%!"
+fishing-reward: "&ePüüdsid %amount%!"
+mining-reward: "&eKaevandad %amount%!"
+entity-kill-reward: "&eSaid %amount% selle tapmise eest!"
+player-kill-reward: "&eSaid %amount% mängija tapmise eest!"
+player-death-drop: "&cKaotasid surres %amount%!"
+currency-format: "%amount%"
 currency-singular: raha
 currency-plural: raha
+currency-few: raha
 
 # Keele sõnumid
 language-usage: "&cKasutus: /rpgmoney language <keel>"

@@ -14,6 +14,14 @@ import xyz.xfeatures.config.*;
 import xyz.xfeatures.data.PlayerData;
 import xyz.xfeatures.listener.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.security.CodeSource;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipInputStream;
+
 public final class XfeaturesRPGMoney extends JavaPlugin {
 
     public static XfeaturesRPGMoney instance;
@@ -55,6 +63,7 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
             }
 
             saveDefaultConfig();
+            saveMessageFiles();
             loadConfigs();
 
             playerData = new PlayerData(this);
@@ -164,5 +173,42 @@ public final class XfeaturesRPGMoney extends JavaPlugin {
 
     public NamespacedKey getNameKey() {
         return new NamespacedKey(this, "money");
+    }
+    
+    private void saveMessageFiles() {
+        File messagesDir = new File(getDataFolder(), "messages");
+        if (!messagesDir.exists()) {
+            if (!messagesDir.mkdirs()) {
+                getLogger().warning("Could not create messages directory.");
+                return;
+            }
+        }
+
+        try {
+            CodeSource src = XfeaturesRPGMoney.class.getProtectionDomain().getCodeSource();
+            if (src != null) {
+                try (InputStream jarStream = src.getLocation().openStream();
+                     ZipInputStream zipStream = new ZipInputStream(jarStream)) {
+
+                    ZipEntry ze;
+                    while ((ze = zipStream.getNextEntry()) != null) {
+                        String entryName = ze.getName();
+                        if (entryName.startsWith("examples/messages/") && entryName.endsWith(".yml")) {
+                            String fileName = new File(entryName).getName();
+                            File outFile = new File(messagesDir, fileName);
+                            if (!outFile.exists()) {
+                                try (InputStream in = getResource(entryName)) {
+                                    if (in != null) {
+                                        Files.copy(in, outFile.toPath());
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+            getLogger().warning("Could not save message files: " + e.getMessage());
+        }
     }
 }

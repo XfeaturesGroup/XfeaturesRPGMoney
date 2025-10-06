@@ -2,18 +2,17 @@ package xyz.xfeatures.util;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.entity.Entity;
 import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import xyz.xfeatures.XfeaturesRPGMoney;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Random;
+
+import net.kyori.adventure.text.Component;
 
 public final class MoneyUtil {
 
@@ -61,11 +60,11 @@ public final class MoneyUtil {
         ItemStack item = new ItemStack(Material.SUNFLOWER);
         ItemMeta meta = item.getItemMeta();
 
-        if (meta != null) {
-            String displayName = XfeaturesRPGMoney.instance.messagesConfig.format("money-item-name", "amount", amount);
+        String displayNameString = XfeaturesRPGMoney.instance.messagesConfig.format("money-item-name", "amount", amount);
 
-            net.kyori.adventure.text.Component nameComponent =
-                    net.kyori.adventure.text.Component.text(displayName);
+        if (meta != null) {
+            Component nameComponent = Component.text(displayNameString);
+
             meta.displayName(nameComponent);
 
             meta.getPersistentDataContainer().set(
@@ -78,10 +77,7 @@ public final class MoneyUtil {
 
         Item droppedItem = loc.getWorld().dropItemNaturally(loc, item);
 
-        String customName = XfeaturesRPGMoney.instance.messagesConfig.format("money-item-name", "amount", amount);
-
-        net.kyori.adventure.text.Component customNameComponent =
-                net.kyori.adventure.text.Component.text(customName);
+        Component customNameComponent = Component.text(displayNameString);
         droppedItem.customName(customNameComponent);
 
         droppedItem.setCustomNameVisible(true);

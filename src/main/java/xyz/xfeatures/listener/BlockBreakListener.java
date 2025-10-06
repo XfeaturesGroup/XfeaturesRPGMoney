@@ -32,9 +32,11 @@ public class BlockBreakListener implements Listener {
         
         Block block = e.getBlock();
         
-        if (block.getChunk().getPersistentDataContainer().has(
-                plugin.getNameKey(),
-                PersistentDataType.BOOLEAN)) {
+        NamespacedKey key = new NamespacedKey(plugin, "player_placed_" + block.getX() + "_" + block.getY() + "_" + block.getZ());
+        PersistentDataContainer container = block.getChunk().getPersistentDataContainer();
+
+        if (container.has(key, PersistentDataType.BOOLEAN)) {
+            container.remove(key);
             return;
         }
         

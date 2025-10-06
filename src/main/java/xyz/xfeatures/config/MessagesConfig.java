@@ -5,7 +5,8 @@ import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.plugin.Plugin;
+import xyz.xfeatures.XfeaturesRPGMoney;
+import xyz.xfeatures.util.CurrencyFormatter;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,8 +17,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.CurrencyFormatter;
 
 public class MessagesConfig {
     private final XfeaturesRPGMoney plugin;
@@ -41,17 +40,23 @@ public class MessagesConfig {
             messagesDir.mkdirs();
         }
 
-        configFile = new File(messagesDir, "messages-" + currentLanguage + ".yml");
+        String messagesFileName = "messages-" + currentLanguage + ".yml";
+        configFile = new File(messagesDir, messagesFileName);
+
+        String resourcePath = "messages/" + messagesFileName;
 
         if (!configFile.exists()) {
-            if (plugin.getResource("messages/messages-" + currentLanguage + ".yml") != null) {
-                plugin.saveResource("messages/messages-" + currentLanguage + ".yml", false);
+            if (plugin.getResource(resourcePath) != null) {
+                plugin.saveResource(resourcePath, false);
             } else {
                 plugin.getLogger().warning("Language file for '" + currentLanguage + "' not found. Using English as fallback.");
-                configFile = new File(messagesDir, "messages-en.yml");
-                
-                if (!configFile.exists() && plugin.getResource("messages/messages-en.yml") != null) {
-                    plugin.saveResource("messages/messages-en.yml", false);
+                currentLanguage = "en";
+                messagesFileName = "messages-en.yml";
+                configFile = new File(messagesDir, messagesFileName);
+                resourcePath = "messages/" + messagesFileName;
+
+                if (!configFile.exists() && plugin.getResource(resourcePath) != null) {
+                    plugin.saveResource(resourcePath, false);
                 }
             }
         }
@@ -103,46 +108,41 @@ public class MessagesConfig {
     }
 
     public String get(String path) {
-        String message = config.getString(path, "Missing message: " + path);
-        return ChatColor.translateAlternateColorCodes('&', message);
+        return cachedMessages.getOrDefault(path, "Missing message: " + path);
     }
 
-    public String format(String path, Object... replacements) {
+    public String formatNoColor(String path, Object... replacements) {
         String message = get(path);
-        
-        if (replacements.length % 2 != 0) {
-            plugin.getLogger().warning("Неверное количество аргументов для форматирования сообщения: " + path);
-            return message;
-        }
-        
-        Map<String, Object> replacementMap = new HashMap<>();
         for (int i = 0; i < replacements.length; i += 2) {
-            if (replacements[i] instanceof String) {
-                String key = (String) replacements[i];
-                Object value = replacements[i + 1];
-
-                if ("amount".equals(key) && value instanceof Number) {
-                    double amount = ((Number) value).doubleValue();
-                    replacementMap.put(key, String.format("%.2f", amount));
+            if (i + 1 < replacements.length) {
+                String key = String.valueOf(replacements[i]);
+                String value;
+                if (replacements[i+1] instanceof Double || replacements[i+1] instanceof Float) {
+                    value = CurrencyFormatter.format((Double) replacements[i+1]);
                 } else {
-                    replacementMap.put(key, value);
+                    value = String.valueOf(replacements[i+1]);
                 }
+                message = message.replace("%" + key + "%", value);
             }
         }
-        
-        for (Map.Entry<String, Object> entry : replacementMap.entrySet()) {
-            message = message.replace("%" + entry.getKey() + "%", String.valueOf(entry.getValue()));
-        }
-        
         return message;
     }
 
+    public String format(String path, Object... replacements) {
+        String message = formatNoColor(path, replacements);
+        return colorize(message);
+    }
+
     public Component formatAsComponent(String key, Object... replacements) {
-        String formatted = format(key, replacements);
-        return miniMessage.deserialize(convertToMiniMessage(formatted));
+        String messageWithPlaceholders = formatNoColor(key, replacements);
+
+        String miniMessageString = convertToMiniMessage(messageWithPlaceholders);
+
+        return miniMessage.deserialize(miniMessageString);
     }
 
     private String convertToMiniMessage(String input) {
+        if (input == null) return "";
         String result = input.replace("&0", "<black>")
                 .replace("&1", "<dark_blue>")
                 .replace("&2", "<dark_green>")
@@ -159,10 +159,10 @@ public class MessagesConfig {
                 .replace("&d", "<light_purple>")
                 .replace("&e", "<yellow>")
                 .replace("&f", "<white>")
+                .replace("&k", "<obfuscated>")
                 .replace("&l", "<bold>")
                 .replace("&m", "<strikethrough>")
-                .replace("&n", "<underlined>")
-                .replace("&o", "<italic>")
+                .replace("&n", "<underline>")
                 .replace("&r", "<reset>");
 
         Matcher matcher = hexPattern.matcher(result);
@@ -171,22 +171,14 @@ public class MessagesConfig {
             matcher.appendReplacement(sb, "<#" + matcher.group(1) + ">");
         }
         matcher.appendTail(sb);
-        
+
         return sb.toString();
     }
 
     public String colorize(String input) {
-        if (input == null) return "";
-
-        Matcher matcher = hexPattern.matcher(input);
-        StringBuffer sb = new StringBuffer();
-        
-        while (matcher.find()) {
-            String hexColor = matcher.group(1);
-            matcher.appendReplacement(sb, ChatColor.valueOf("#" + hexColor).toString());
+        if (input == null) {
+            return "";
         }
-        matcher.appendTail(sb);
-
-        return ChatColor.translateAlternateColorCodes('&', sb.toString());
+        return ChatColor.translateAlternateColorCodes('&', input);
     }
 }

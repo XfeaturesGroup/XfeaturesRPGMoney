@@ -13,7 +13,7 @@ stats-collected: "&eDinheiro coletado: &6%amount%"
 
 # Mensagens de classificação de jogadores
 top-header: "&7===== &cClassificação de jogadores (Página %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% dinheiro"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Use &c/rpgmoney top %page% &7para a próxima página"
 
 # Mensagens de informação do plugin
@@ -21,9 +21,9 @@ info-header: "&7===== &cInformações do plugin &7====="
 info-version: "&cVersão: &7%version%"
 info-author: "&cAutores: &7%authors%"
 info-fortune-header: "&cMultiplicadores de Fortuna:"
-info-fortune-entry: "&cNível %level%: &7+%percent% dinheiro"
+info-fortune-entry: "&cNível %level%: &7+%percent%% dinheiro"
 info-looting-header: "&cMultiplicadores de Saque:"
-info-looting-entry: "&cNível %level%: &7+%percent% dinheiro"
+info-looting-entry: "&cNível %level%: &7+%percent%% dinheiro"
 
 # Mensagens de ajuda
 help-header: "&7===== &cAjuda do XfeaturesRPGMoney &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <idioma> &7- Mudar o idioma do plugin"
 
 # Mensagens de coleta de dinheiro
 currency-name: Dinheiro
-pickup: "&eVocê pegou %amount% dinheiro!"
-currency-pickup: "&eVocê pegou %amount% dinheiro!"
-money-item-name: "&e%amount% dinheiro"
-money-drop: "&eVocê deixou cair %amount% dinheiro!"
-fishing-reward: "&eVocê pescou %amount% dinheiro!"
-mining-reward: "&eVocê minerou %amount% dinheiro!"
-entity-kill-reward: "&eVocê recebeu %amount% dinheiro por esta morte!"
-player-kill-reward: "&eVocê recebeu %amount% dinheiro por matar um jogador!"
-player-death-drop: "&cVocê perdeu %amount% dinheiro ao morrer!"
-currency-format: "%amount% dinheiro"
+pickup: "&eVocê pegou %amount%!"
+currency-pickup: "&eVocê pegou %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&eVocê deixou cair %amount%!"
+fishing-reward: "&eVocê pescou %amount%!"
+mining-reward: "&eVocê minerou %amount%!"
+entity-kill-reward: "&eVocê recebeu %amount% por esta morte!"
+player-kill-reward: "&eVocê recebeu %amount% por matar um jogador!"
+player-death-drop: "&cVocê perdeu %amount% ao morrer!"
+currency-format: "%amount%"
 currency-singular: dinheiro
 currency-plural: dinheiro
+currency-few: dinheiros
 
 # Mensagens de idioma
 language-usage: "&cUso: /rpgmoney language <idioma>"

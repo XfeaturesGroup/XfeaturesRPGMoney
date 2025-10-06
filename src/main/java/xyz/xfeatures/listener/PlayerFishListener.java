@@ -1,6 +1,7 @@
 package xyz.xfeatures.listener;
 
 import net.milkbowl.vault.economy.Economy;
+import net.kyori.adventure.text.Component;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
@@ -29,11 +30,16 @@ public class PlayerFishListener implements Listener {
             eco.depositPlayer(player, amount);
             XfeaturesRPGMoney.instance.playerData.addCollectedMoney(player, amount);
         }
-        
+
         if (XfeaturesRPGMoney.instance.mainConfig.isShowActionBarMessages()) {
-            String msg = XfeaturesRPGMoney.instance.messagesConfig.get("pickup");
-            msg = CurrencyFormatter.replaceAmount(msg, amount);
-            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
+            Component messageComponent = XfeaturesRPGMoney.instance.messagesConfig.formatAsComponent(
+                    "fishing-reward",
+                    "amount",
+                    amount
+            );
+
+            player.sendActionBar(messageComponent);
+
         }
     }
 }

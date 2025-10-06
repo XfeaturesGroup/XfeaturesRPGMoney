@@ -13,7 +13,7 @@ stats-collected: "&eMonedas recogidas: &6%amount%"
 
 # Mensajes de los mejores jugadores
 top-header: "&7===== &cMejores jugadores (Página %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% monedas"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Utilice &c/rpgmoney top %page% &7para pasar a la página siguiente"
 
 # Mensajes de información sobre el complemento
@@ -21,9 +21,9 @@ info-header: "&7===== &cInformación sobre el complemento &7====="
 info-version: "&cVersión: &7%version%"
 info-author: "&cAutores: &7%authors%"
 info-fortune-header: "&cMultiplicadores de suerte:"
-info-fortune-entry: "&cNivel %level%: &7+%percent% monedas"
+info-fortune-entry: "&cNivel %level%: &7+%percent%% monedas"
 info-looting-header: "&cMultiplicadores de botín:"
-info-looting-entry: "&cNivel %level%: &7+%percent% monedas"
+info-looting-entry: "&cNivel %level%: &7+%percent%% monedas"
 
 # Mensajes de ayuda
 help-header: "&7===== &cXfeaturesRPGMoney Ayuda &7====="
@@ -35,19 +35,19 @@ help-language: "&c/rpgmoney language <idioma> &7- Cambiar el idioma del plugin"
 
 # Mensajes sobre la obtención de monedas
 currency-name: monedas
-pickup: "¡Has recogido %amount% monedas!"
-currency-pickup: "¡Has recogido %amount% monedas!"
-money-item-name: "%amount% monedas"
-money-drop: "¡Has conseguido %amount% monedas!"
-fishing-reward: "¡Has pescado %amount% monedas!"
-mining-reward: "¡Has extraído %amount% monedas!"
-entity-kill-reward: "¡Has obtenido %amount% monedas por matar!"
-player-kill-reward: "¡Has obtenido %amount% monedas por matar a un jugador!"
-player-death-drop: "¡Has perdido %amount% monedas al morir!"
-currency-format: "%amount% monedas"
+pickup: "&e¡Has recogido %amount%!"
+currency-pickup: "&e¡Has recogido %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&e¡Has conseguido %amount%!"
+fishing-reward: "&e¡Has pescado %amount%!"
+mining-reward: "&e¡Has extraído %amount%!"
+entity-kill-reward: "&e¡Has obtenido %amount% por matar!"
+player-kill-reward: "&e¡Has obtenido %amount% por matar a un jugador!"
+player-death-drop: "&c¡Has perdido %amount% al morir!"
+currency-format: "%amount%"
 currency-singular: moneda
 currency-plural: monedas
-currency-few: monedas # Para la gramática rusa (2-4 monedas)
+currency-few: monedas
 
 # Mensajes de idioma
 language-usage: "&cUso: /rpgmoney language <idioma>"

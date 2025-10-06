@@ -1,6 +1,6 @@
 # 💰 XfeaturesRPGMoney
 
-![Version](https://img.shields.io/badge/version-1.1.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.1.2-blue.svg)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.13%2B-brightgreen.svg)
 ![Java](https://img.shields.io/badge/Java-21-orange.svg)
 ![API](https://img.shields.io/badge/API-available-informational)
@@ -339,9 +339,9 @@ info-header: "&7===== &cPlugin Information &7====="
 info-version: "&cVersion: &7%version%"
 info-author: "&cAuthors: &7%authors%"
 info-fortune-header: "&cFortune Multipliers:"
-info-fortune-entry: "&cLevel %level%: &7+%percent% money"
+info-fortune-entry: "&cLevel %level%: &7+%percent%% money"
 info-looting-header: "&cLooting Multipliers:"
-info-looting-entry: "&cLevel %level%: &7+%percent% money"
+info-looting-entry: "&cLevel %level%: &7+%percent%% money"
 
 # Help messages
 help-header: "&7===== &cXfeaturesRPGMoney Help &7====="
@@ -362,7 +362,7 @@ mining-reward: "&eYou mined %amount% money!"
 entity-kill-reward: "&eYou received %amount% money for this kill!"
 player-kill-reward: "&eYou received %amount% money for killing a player!"
 player-death-drop: "&cYou lost %amount% money by dying!"
-currency-format: "%amount% money"
+currency-format: "%amount%"
 currency-singular: money
 currency-plural: money
 

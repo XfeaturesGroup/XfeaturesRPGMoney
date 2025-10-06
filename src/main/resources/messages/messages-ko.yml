@@ -21,9 +21,9 @@ info-header: "&7===== &c플러그인 정보 &7====="
 info-version: "&c버전: &7%version%"
 info-author: "&c제작자: &7%authors%"
 info-fortune-header: "&c행운 배율:"
-info-fortune-entry: "&c레벨 %level%: &7+%percent% 돈"
+info-fortune-entry: "&c레벨 %level%: &7+%percent%% 돈"
 info-looting-header: "&c약탈 배율:"
-info-looting-entry: "&c레벨 %level%: &7+%percent% 돈"
+info-looting-entry: "&c레벨 %level%: &7+%percent%% 돈"
 
 # 도움말 메시지
 help-header: "&7===== &cXfeaturesRPGMoney 도움말 &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <언어> &7- 플러그인 언어 변경"
 
 # 돈 수집 메시지
 currency-name: 돈
-pickup: "&e%amount% 돈을 주웠습니다!"
-currency-pickup: "&e%amount% 돈을 주웠습니다!"
+pickup: "&e%amount% 주웠습니다!"
+currency-pickup: "&e%amount% 주웠습니다!"
 money-item-name: "&e%amount% 돈"
-money-drop: "&e%amount% 돈을 떨어뜨렸습니다!"
-fishing-reward: "&e%amount% 돈을 낚았습니다!"
-mining-reward: "&e%amount% 돈을 채굴했습니다!"
-entity-kill-reward: "&e이 처치로 %amount% 돈을 받았습니다!"
-player-kill-reward: "&e플레이어 처치로 %amount% 돈을 받았습니다!"
-player-death-drop: "&c사망으로 %amount% 돈을 잃었습니다!"
-currency-format: "%amount% 돈"
+money-drop: "&e%amount% 떨어뜨렸습니다!"
+fishing-reward: "&e%amount% 낚았습니다!"
+mining-reward: "&e%amount% 채굴했습니다!"
+entity-kill-reward: "&e이 처치로 %amount% 받았습니다!"
+player-kill-reward: "&e플레이어 처치로 %amount% 받았습니다!"
+player-death-drop: "&c사망으로 %amount% 잃었습니다!"
+currency-format: "%amount%"
 currency-singular: 돈
 currency-plural: 돈
+currency-few: 돈
 
 # 언어 메시지
 language-usage: "&c사용법: /rpgmoney language <언어>"

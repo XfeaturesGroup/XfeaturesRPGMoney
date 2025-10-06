@@ -13,7 +13,7 @@ stats-collected: "&eالمال المجمع: &6%amount%"
 
 # رسائل تصنيف اللاعبين
 top-header: "&7===== &cتصنيف اللاعبين (الصفحة %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% مال"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7استخدم &c/rpgmoney top %page% &7للصفحة التالية"
 
 # رسائل معلومات البرنامج المساعد
@@ -21,9 +21,9 @@ info-header: "&7===== &cمعلومات البرنامج المساعد &7====="
 info-version: "&cالإصدار: &7%version%"
 info-author: "&cالمؤلفون: &7%authors%"
 info-fortune-header: "&cمضاعفات الحظ:"
-info-fortune-entry: "&cالمستوى %level%: &7+%percent% مال"
+info-fortune-entry: "&cالمستوى %level%: &7+%percent%%"
 info-looting-header: "&cمضاعفات النهب:"
-info-looting-entry: "&cالمستوى %level%: &7+%percent% مال"
+info-looting-entry: "&cالمستوى %level%: &7+%percent%%"
 
 # رسائل المساعدة
 help-header: "&7===== &cمساعدة XfeaturesRPGMoney &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <اللغة> &7- تغيير لغة البر
 
 # رسائل جمع المال
 currency-name: مال
-pickup: "&eلقد التقطت %amount% من المال!"
-currency-pickup: "&eلقد التقطت %amount% من المال!"
-money-item-name: "&e%amount% مال"
-money-drop: "&eلقد أسقطت %amount% من المال!"
-fishing-reward: "&eلقد اصطدت %amount% من المال!"
-mining-reward: "&eلقد استخرجت %amount% من المال!"
-entity-kill-reward: "&eلقد حصلت على %amount% من المال مقابل هذا القتل!"
-player-kill-reward: "&eلقد حصلت على %amount% من المال مقابل قتل لاعب!"
-player-death-drop: "&cلقد فقدت %amount% من المال بسبب الموت!"
-currency-format: "%amount% مال"
+pickup: "&eلقد التقطت %amount%!"
+currency-pickup: "&eلقد التقطت %amount%!"
+money-item-name: "&e%amount%"
+money-drop: "&eلقد أسقطت %amount%!"
+fishing-reward: "&eلقد اصطدت %amount%!"
+mining-reward: "&eلقد استخرجت %amount%!"
+entity-kill-reward: "&eلقد حصلت على %amount% مقابل هذا القتل!"
+player-kill-reward: "&eلقد حصلت على %amount% مقابل قتل لاعب!"
+player-death-drop: "&cلقد فقدت %amount% بسبب الموت!"
+currency-format: "%amount%"
 currency-singular: مال
 currency-plural: أموال
+currency-few: أموال
 
 # رسائل اللغة
 language-usage: "&cالاستخدام: /rpgmoney language <اللغة>"

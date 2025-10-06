@@ -13,7 +13,7 @@ stats-collected: "&eToplanan para: &6%amount%"
 
 # Oyuncu sıralaması mesajları
 top-header: "&7===== &cOyuncu Sıralaması (Sayfa %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% para"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7Sonraki sayfa için &c/rpgmoney top %page% &7kullanın"
 
 # Eklenti bilgi mesajları
@@ -21,9 +21,9 @@ info-header: "&7===== &cEklenti Bilgisi &7====="
 info-version: "&cSürüm: &7%version%"
 info-author: "&cYazarlar: &7%authors%"
 info-fortune-header: "&cŞans Çarpanları:"
-info-fortune-entry: "&cSeviye %level%: &7+%percent% para"
+info-fortune-entry: "&cSeviye %level%: &7+%percent%% para"
 info-looting-header: "&cGanimet Çarpanları:"
-info-looting-entry: "&cSeviye %level%: &7+%percent% para"
+info-looting-entry: "&cSeviye %level%: &7+%percent%% para"
 
 # Yardım mesajları
 help-header: "&7===== &cXfeaturesRPGMoney Yardım &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <dil> &7- Eklenti dilini değiştir"
 
 # Para toplama mesajları
 currency-name: Para
-pickup: "&e%amount% para topladınız!"
-currency-pickup: "&e%amount% para topladınız!"
-money-item-name: "&e%amount% para"
-money-drop: "&e%amount% para düşürdünüz!"
-fishing-reward: "&e%amount% para yakaladınız!"
-mining-reward: "&e%amount% para kazdınız!"
-entity-kill-reward: "&eBu öldürme için %amount% para kazandınız!"
-player-kill-reward: "&eBir oyuncuyu öldürdüğünüz için %amount% para kazandınız!"
-player-death-drop: "&cÖlürken %amount% para kaybettiniz!"
-currency-format: "%amount% para"
+pickup: "&e%amount% topladınız!"
+currency-pickup: "&e%amount% topladınız!"
+money-item-name: "&e%amount%"
+money-drop: "&e%amount% düşürdünüz!"
+fishing-reward: "&e%amount% yakaladınız!"
+mining-reward: "&e%amount% kazdınız!"
+entity-kill-reward: "&eBu öldürme için %amount% kazandınız!"
+player-kill-reward: "&eBir oyuncuyu öldürdüğünüz için %amount% kazandınız!"
+player-death-drop: "&cÖlürken %amount% kaybettiniz!"
+currency-format: "%amount%"
 currency-singular: para
 currency-plural: para
+currency-few: para
 
 # Dil mesajları
 language-usage: "&cKullanım: /rpgmoney language <dil>"

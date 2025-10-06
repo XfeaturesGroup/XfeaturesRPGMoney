@@ -13,7 +13,7 @@ stats-collected: "&eएकत्रित पैसा: &6%amount%"
 
 # शीर्ष खिलाड़ी संदेश
 top-header: "&7===== &cखिलाड़ी रैंकिंग (पेज %page%) &7====="
-top-player-entry: "&7#%rank% &c%player% &7- &7%amount% पैसा"
+top-player-entry: "&7#%rank% &c%player% &7- &7%amount%"
 top-next-page: "&7अगले पेज के लिए &c/rpgmoney top %page% &7का उपयोग करें"
 
 # प्लगइन जानकारी संदेश
@@ -21,9 +21,9 @@ info-header: "&7===== &cप्लगइन जानकारी &7====="
 info-version: "&cवर्शन: &7%version%"
 info-author: "&cलेखक: &7%authors%"
 info-fortune-header: "&cफॉर्च्यून गुणक:"
-info-fortune-entry: "&cस्तर %level%: &7+%percent% पैसा"
+info-fortune-entry: "&cस्तर %level%: &7+%percent%% पैसा"
 info-looting-header: "&cलूटिंग गुणक:"
-info-looting-entry: "&cस्तर %level%: &7+%percent% पैसा"
+info-looting-entry: "&cस्तर %level%: &7+%percent%% पैसा"
 
 # मदद संदेश
 help-header: "&7===== &cXfeaturesRPGMoney मदद &7====="
@@ -35,18 +35,19 @@ help-language: "&c/rpgmoney language <भाषा> &7- प्लगइन भ�
 
 # पैसा संग्रह संदेश
 currency-name: पैसा
-pickup: "&eआपने %amount% पैसा उठाया!"
-currency-pickup: "&eआपने %amount% पैसा उठाया!"
-money-item-name: "&e%amount% पैसा"
-money-drop: "&eआपने %amount% पैसा गिराया!"
-fishing-reward: "&eआपने %amount% पैसा मछली पकड़ा!"
-mining-reward: "&eआपने %amount% पैसा खनन किया!"
-entity-kill-reward: "&eआपको इस किल के लिए %amount% पैसा मिला!"
-player-kill-reward: "&eआपको एक खिलाड़ी को मारने के लिए %amount% पैसा मिला!"
-player-death-drop: "&cमरने से आपने %amount% पैसा खो दिया!"
-currency-format: "%amount% पैसा"
+pickup: "&eआपने %amount% उठाया!"
+currency-pickup: "&eआपने %amount% उठाया!"
+money-item-name: "&e%amount%"
+money-drop: "&eआपने %amount% गिराया!"
+fishing-reward: "&eआपने %amount% मछली पकड़ा!"
+mining-reward: "&eआपने %amount% खनन किया!"
+entity-kill-reward: "&eआपको इस किल के लिए %amount% मिला!"
+player-kill-reward: "&eआपको एक खिलाड़ी को मारने के लिए %amount% मिला!"
+player-death-drop: "&cमरने से आपने %amount% खो दिया!"
+currency-format: "%amount%"
 currency-singular: पैसा
 currency-plural: पैसे
+currency-few: पैसे
 
 # भाषा संदेश
 language-usage: "&cउपयोग: /rpgmoney language <भाषा>"

@@ -108,9 +108,9 @@ public class RPGMoneyCommand implements CommandExecutor, TabCompleter {
                 }
                 
                 String newLanguage = args[1].toLowerCase();
-                File langFile = new File(plugin.getDataFolder(), "messages/messages-" + newLanguage + ".yml");
-                
-                if (!langFile.exists()) {
+                String resourcePath = "messages/messages-" + newLanguage + ".yml";
+
+                if (plugin.getResource(resourcePath) == null) {
                     sender.sendMessage(plugin.messagesConfig.format("language-not-found", "language", newLanguage));
                     return true;
                 }
