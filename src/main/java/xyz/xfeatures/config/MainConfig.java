@@ -20,6 +20,8 @@ public class MainConfig {
     private double combineRadius;
     private double spawnerMultiplier;
     private String language;
+    private boolean fullInventoryCollect;
+    private String pickupSound;
 
     public MainConfig(Plugin plugin) {
         this.plugin = plugin;
@@ -89,6 +91,14 @@ public class MainConfig {
             config.set("language", "en");
         }
         
+        if (!config.contains("full-inventory-collect")) {
+            config.set("full-inventory-collect", false);
+        }
+        
+        if (!config.contains("pickup-sound")) {
+            config.set("pickup-sound", "item.armor.equip_chain");
+        }
+        
         plugin.saveConfig();
 
         dropChance = config.getDouble("drop-chance");
@@ -123,6 +133,8 @@ public class MainConfig {
         }
 
         language = config.getString("language", "en");
+        fullInventoryCollect = config.getBoolean("full-inventory-collect", false);
+        pickupSound = config.getString("pickup-sound", "item.armor.equip_chain");
     }
 
     public double getDropChance() {
@@ -171,5 +183,13 @@ public class MainConfig {
     
     public String getLanguage() {
         return language;
+    }
+    
+    public boolean isFullInventoryCollect() {
+        return fullInventoryCollect;
+    }
+    
+    public String getPickupSound() {
+        return pickupSound;
     }
 }

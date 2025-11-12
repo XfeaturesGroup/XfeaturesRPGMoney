@@ -11,6 +11,8 @@ drop-chance: 0.75 # Probability of coins dropping when mining blocks and killing
 show-action-bar-messages: true # Show messages when picking up coins in the Action Bar
 player-death-drop-percentage: 0.07 # Coin drop rate from killed players
 max-money-drop: 1000.0 # Maximum amount of money in a single coin
+full-inventory-collect: false # Allow collecting coins even with a full inventory
+pickup-sound: "item.armor.equip_chain" # Sound when picking up coins (use "none", or any valid Bukkit Sound)
 
 # Settings for combining nearby drops
 combine-nearby-drops: true
@@ -20,13 +22,13 @@ combine-radius: 1.5
 show-fortune-multiplier-messages: false
 show-looting-multiplier-messages: false
 
-# Multipliers for the “Fortune” enchantment
+# Multipliers for the "Fortune" enchantment
 fortune-multipliers:
   1: 1.25  # Fortune I - increases coin drop rate by 25%
   2: 1.5   # Fortune II - increases coin drop rate by 50%
   3: 1.75  # Fortune III - increases coin drop rate by 75%
 
-# Multipliers for “Looting” enchantments
+# Multipliers for "Looting" enchantments
 looting-multipliers:
   1: 1.25  # Looting I - increases coin drop rate by 25%
   2: 1.5   # Looting II - increases coin drop rate by 50%
