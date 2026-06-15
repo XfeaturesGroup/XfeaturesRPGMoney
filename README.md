@@ -388,6 +388,7 @@ language-changed: "&aLanguage changed to %language%."
 - xfeatures.rpgmoney.top - Access to view the top players
 - xfeatures.rpgmoney.admin - Full access to all plugin features
 - xfeatures.rpgmoney.language - Access to change the plugin language
+- xfeatures.rpgmoney.multiplier.1.5 - Money multiplier (Example x1.5)
 
 ## 🛠️ API for developers
 The plugin provides an API for integration with other plugins:
@@ -462,5 +463,5 @@ If you want to disable statistics collection, you can do so in the `plugins/bSta
 ![Last Commit](https://img.shields.io/github/last-commit/XfeaturesGroup/XfeaturesRPGMoney?color=blueviolet)
 
 <p align="center">
-  Made with ❤️ by the XfeaturesGroup team
+  Made by the XfeaturesGroup Dev-team
 </p>
