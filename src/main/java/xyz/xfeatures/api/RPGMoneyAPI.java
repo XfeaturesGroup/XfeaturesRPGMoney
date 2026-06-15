@@ -16,7 +16,7 @@ import java.util.Optional;
  * Используйте этот класс для интеграции с другими плагинами.
  * 
  * @author XfeaturesGroup, kingnoype
- * @version 1.1.2
+ * @version 1.1.3
  */
 public class RPGMoneyAPI {
 
