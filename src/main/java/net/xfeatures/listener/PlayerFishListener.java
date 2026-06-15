@@ -22,6 +22,9 @@ public class PlayerFishListener implements Listener {
 
         double amount = MoneyUtil.getRandomInRange(reward.get(0), reward.get(1));
         Player player = e.getPlayer();
+
+        amount *= MoneyUtil.getPermissionMultiplier(player);
+        
         Economy eco = XfeaturesRPGMoney.economy;
         if (eco != null) {
             eco.depositPlayer(player, amount);

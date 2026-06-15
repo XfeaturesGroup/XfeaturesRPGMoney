@@ -43,6 +43,8 @@ public class BlockBreakListener implements Listener {
         if (reward == null || reward.size() < 2) return;
         
         double amount = MoneyUtil.getRandomInRange(reward.get(0), reward.get(1));
+
+        amount *= MoneyUtil.getPermissionMultiplier(player);
         
         ItemStack tool = player.getInventory().getItemInMainHand();
         int fortuneLevel = tool.getEnchantmentLevel(Enchantment.FORTUNE);

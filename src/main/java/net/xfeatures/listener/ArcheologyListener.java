@@ -157,9 +157,12 @@ public class ArcheologyListener implements Listener {
         
         double[] reward = plugin.archeologyConfig.getReward(material);
         double amount = MoneyUtil.getRandomInRange(reward[0], reward[1]);
-        
+
+        amount *= MoneyUtil.getPermissionMultiplier(player);
+
+        double finalAmount = amount;
         plugin.getServer().getScheduler().runTask(plugin, () -> {
-            MoneyUtil.dropMoney(player.getLocation(), amount);
+            MoneyUtil.dropMoney(player.getLocation(), finalAmount);
         });
     }
     

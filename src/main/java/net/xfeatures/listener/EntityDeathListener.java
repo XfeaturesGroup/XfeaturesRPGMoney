@@ -34,6 +34,8 @@ public class EntityDeathListener implements Listener {
         if (reward == null || reward.size() < 2) return;
         
         double amount = MoneyUtil.getRandomInRange(reward.get(0), reward.get(1)) * multiplier;
+
+        amount *= MoneyUtil.getPermissionMultiplier(killer);
         
         ItemStack weapon = killer.getInventory().getItemInMainHand();
         int lootingLevel = weapon.getEnchantmentLevel(Enchantment.LOOTING);

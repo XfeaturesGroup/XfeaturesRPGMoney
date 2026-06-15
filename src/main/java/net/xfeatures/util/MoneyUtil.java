@@ -84,6 +84,29 @@ public final class MoneyUtil {
         droppedItem.setPickupDelay(0);
     }
 
+    public static double getPermissionMultiplier(org.bukkit.entity.Player player) {
+        if (player == null) return 1.0;
+
+        double maxMultiplier = 1.0;
+        String permPrefix = "xfeatures.rpgmoney.multiplier.";
+
+        for (org.bukkit.permissions.PermissionAttachmentInfo permInfo : player.getEffectivePermissions()) {
+            String perm = permInfo.getPermission();
+
+            if (perm.startsWith(permPrefix)) {
+                String valueStr = perm.substring(permPrefix.length());
+                try {
+                    double val = Double.parseDouble(valueStr);
+                    if (val > maxMultiplier) {
+                        maxMultiplier = val;
+                    }
+                } catch (NumberFormatException _) {
+                }
+            }
+        }
+        return maxMultiplier;
+    }
+
     public static double getRandomInRange(double min, double max) {
         return min + (max - min) * random.nextDouble();
     }
