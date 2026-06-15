@@ -1,4 +1,4 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
@@ -6,7 +6,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.persistence.PersistentDataType;
-import xyz.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.XfeaturesRPGMoney;
 
 public class BlockPlaceListener implements Listener {
 

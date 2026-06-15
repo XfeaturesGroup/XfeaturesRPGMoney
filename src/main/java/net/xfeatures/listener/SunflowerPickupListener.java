@@ -1,4 +1,4 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Material;
@@ -11,10 +11,9 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
-import xyz.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.XfeaturesRPGMoney;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
 

@@ -1,4 +1,4 @@
-package xyz.xfeatures.util;
+package net.xfeatures.util;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -6,7 +6,7 @@ import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
-import xyz.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.XfeaturesRPGMoney;
 
 import java.util.ArrayList;
 import java.util.List;

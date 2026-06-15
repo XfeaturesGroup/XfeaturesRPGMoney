@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-1.1.3-blue.svg)
 ![Minecraft](https://img.shields.io/badge/minecraft-1.13%2B-brightgreen.svg)
-![Java](https://img.shields.io/badge/Java-21-orange.svg)
+![Java](https://img.shields.io/badge/Java-25-orange.svg)
 ![API](https://img.shields.io/badge/API-available-informational)
 ![Vault](https://img.shields.io/badge/Vault-required-critical)
 ![License](https://img.shields.io/badge/license-MIT-yellow.svg)

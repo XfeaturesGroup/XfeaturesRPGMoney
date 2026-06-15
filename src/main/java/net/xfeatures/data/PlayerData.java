@@ -1,9 +1,9 @@
-package xyz.xfeatures.data;
+package net.xfeatures.data;
 
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import xyz.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.XfeaturesRPGMoney;
 
 import java.io.File;
 import java.io.IOException;

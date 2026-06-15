@@ -1,4 +1,4 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
 import net.milkbowl.vault.economy.Economy;
 import net.kyori.adventure.text.Component;
@@ -7,12 +7,9 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerFishEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.entity.Player;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.MoneyUtil;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.util.MoneyUtil;
 import java.util.List;
-import net.md_5.bungee.api.ChatMessageType;
-import net.md_5.bungee.api.chat.TextComponent;
-import xyz.xfeatures.util.CurrencyFormatter;
 
 public class PlayerFishListener implements Listener {
     @EventHandler

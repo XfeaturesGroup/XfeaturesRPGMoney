@@ -1,4 +1,4 @@
-package xyz.xfeatures.config;
+package net.xfeatures.config;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;

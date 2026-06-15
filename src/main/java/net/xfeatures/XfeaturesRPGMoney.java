@@ -1,18 +1,18 @@
-package xyz.xfeatures;
+package net.xfeatures;
 
 import net.milkbowl.vault.economy.Economy;
-import org.bukkit.Bukkit;
+import net.xfeatures.config.*;
+import net.xfeatures.listener.*;
 import org.bukkit.NamespacedKey;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bstats.bukkit.Metrics;
 import org.bstats.charts.SimplePie;
 import org.bstats.charts.SingleLineChart;
-import xyz.xfeatures.command.RPGMoneyCommand;
-import xyz.xfeatures.config.*;
-import xyz.xfeatures.data.PlayerData;
-import xyz.xfeatures.listener.*;
+import net.xfeatures.command.RPGMoneyCommand;
+import net.xfeatures.config.*;
+import net.xfeatures.data.PlayerData;
+import net.xfeatures.listener.*;
 
 import java.io.File;
 import java.io.IOException;

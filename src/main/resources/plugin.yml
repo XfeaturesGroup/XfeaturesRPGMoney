@@ -1,12 +1,12 @@
 name: XfeaturesRPGMoney
 version: 1.1.3-SNAPSHOT
-main: xyz.xfeatures.XfeaturesRPGMoney
+main: net.xfeatures.XfeaturesRPGMoney
 api-version: 1.13
 prefix: XFEATURES
 load: STARTUP
 authors: [XfeaturesGroup, kingnoype]
 description: RPG Money system for Minecraft servers
-website: https://xfrpgm.dev.xfeatures.xyz/
+website: https://xfrpgm.dev.xfeatures.net/
 depend: [Vault]
 softdepend: [Xfeatures, CMI, Essentials, EssentialsX]
 commands:

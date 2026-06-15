@@ -1,15 +1,14 @@
-package xyz.xfeatures.api;
+package net.xfeatures.api;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.persistence.PersistentDataType;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.data.PlayerData.PlayerStats;
-import xyz.xfeatures.util.MoneyUtil;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.data.PlayerData.PlayerStats;
+import net.xfeatures.util.MoneyUtil;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
 
 /**
  * API для взаимодействия с функциональностью XfeaturesRPGMoney.

@@ -1,4 +1,4 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -10,9 +10,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.ItemStack;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.CurrencyFormatter;
-import xyz.xfeatures.util.MoneyUtil;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.util.MoneyUtil;
 import java.util.List;
 
 public class EntityDeathListener implements Listener {

@@ -1,4 +1,4 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -13,15 +13,13 @@ import org.bukkit.event.entity.EntityPickupItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.scheduler.BukkitRunnable;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.MoneyUtil;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.util.MoneyUtil;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Random;
 import java.util.Set;
 

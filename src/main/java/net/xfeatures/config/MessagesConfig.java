@@ -1,12 +1,12 @@
-package xyz.xfeatures.config;
+package net.xfeatures.config;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.CurrencyFormatter;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.util.CurrencyFormatter;
 
 import java.io.File;
 import java.io.IOException;

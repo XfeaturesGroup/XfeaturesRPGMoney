@@ -1,15 +1,13 @@
-package xyz.xfeatures.command;
+package net.xfeatures.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.data.PlayerData.PlayerStats;
-import xyz.xfeatures.util.CurrencyFormatter;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.data.PlayerData.PlayerStats;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;

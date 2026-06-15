@@ -1,6 +1,5 @@
-package xyz.xfeatures.listener;
+package net.xfeatures.listener;
 
-import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.NamespacedKey;
 import org.bukkit.block.Block;
@@ -14,8 +13,8 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;
-import xyz.xfeatures.XfeaturesRPGMoney;
-import xyz.xfeatures.util.MoneyUtil;
+import net.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.util.MoneyUtil;
 
 import java.util.List;
 

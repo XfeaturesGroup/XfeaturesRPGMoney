@@ -1,6 +1,6 @@
-package xyz.xfeatures.util;
+package net.xfeatures.util;
 
-import xyz.xfeatures.XfeaturesRPGMoney;
+import net.xfeatures.XfeaturesRPGMoney;
 
 public class CurrencyFormatter {
     
